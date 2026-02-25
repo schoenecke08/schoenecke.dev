@@ -26,6 +26,10 @@ website:
   navbar:
     foreground: black
     background: "#f87C63"
+  sidebar:
+    contents:
+    - index.qmd
+    - /pages/books.qmd
 
 format:
   html:
