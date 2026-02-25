@@ -4,41 +4,59 @@
     "href": "index.html",
     "title": "Al Schoenecke",
     "section": "",
-    "text": "CS Department @ USMA"
+    "text": "CS Department @ USMA",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
   },
   {
     "objectID": "index.html#current-projects",
     "href": "index.html#current-projects",
     "title": "Al Schoenecke",
     "section": "Current Projects",
-    "text": "Current Projects\n\nMonopoly in Scala"
+    "text": "Current Projects\n\nMonopoly in Scala",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
   },
   {
     "objectID": "index.html#workflow-and-dotfiles",
     "href": "index.html#workflow-and-dotfiles",
     "title": "Al Schoenecke",
     "section": "Workflow and Dotfiles",
-    "text": "Workflow and Dotfiles\n\nDotfiles\nTools"
+    "text": "Workflow and Dotfiles\n\nDotfiles\nTools",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
   },
   {
     "objectID": "index.html#books",
     "href": "index.html#books",
     "title": "Al Schoenecke",
     "section": "Books",
-    "text": "Books\n\nReading List"
+    "text": "Books\n\nReading List",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
   },
   {
     "objectID": "index.html#official-resources",
     "href": "index.html#official-resources",
     "title": "Al Schoenecke",
     "section": "Official Resources",
-    "text": "Official Resources\n\nGet Linux\nNeovim\nLazyVim\nObsidian Note Taking"
+    "text": "Official Resources\n\nGet Linux\nNeovim\nLazyVim\nObsidian Note Taking",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
   },
   {
     "objectID": "index.html#awesome-resources",
     "href": "index.html#awesome-resources",
     "title": "Al Schoenecke",
     "section": "Awesome Resources",
-    "text": "Awesome Resources\n\nHack the Box\nCryptohack"
+    "text": "Awesome Resources\n\nHack the Box\nCryptohack",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
   }
 ]
