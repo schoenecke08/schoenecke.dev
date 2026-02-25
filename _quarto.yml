@@ -14,18 +14,18 @@ project:
     timeout: 3600
 
 website:
-  title: AI101
-  description: Introduction to Python
+  title: Adventures in Computer Science
+  description: Development
   # site-url: https://slides.example.com/
   # image: /images/01.png
   favicon: /images/favicon.svg
-  page-footer: "© 2026 United States Military Academy"
+  page-footer: Alan Schoenecke, 2026
   page-navigation: true
   open-graph: true
   search: true
   navbar:
     foreground: black
-    background: "#d3bc8d"
+    background: "#f87C63"
 
 format:
   html:
@@ -41,6 +41,7 @@ format:
     theme:
       light:
         - sandstone
+#        - styles.scss
       dark:
         - darkly
     mermaid:
@@ -48,7 +49,7 @@ format:
     grid:
       body-width: 1800px
   revealjs:
-    author: Dr. Joe Snuffy
+    author: Al Schoenecke
     center: true
     date-format: full
     transition: fade

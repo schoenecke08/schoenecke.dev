@@ -1,43 +1,46 @@
 ---
-title: "My Course Website"
-lightbox: true
-format: html
-listing:
-    id: lessons
-    type: grid
-    sort: filename asc
-    grid-columns: 5
-    page-size: 50
-    contents:
-        - lessons/*.qmd
+title: "Al Schoenecke"
+about:
+  id: headline
+  template: broadside
+  image: https://gravatar.com/userimage/277788749/02d7b12ce89e2dc16d9e9d6a4307e1be.jpeg?v=1771988594000&size=512
+  image-shape: round
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/schoenecke08
+format:
+  html:
+    toc: false
 ---
 
-# Course Website
+- CS Department @ USMA 
 
-Source code for a course website. The slides are written in [Markdown](https://www.markdownguide.org/) and converted into a functional website using [Quarto](https://quarto.org/) and [reveal.js](https://revealjs.com/).
+## Current Projects
 
+- Monopoly in Scala
 
-## Course Objectives
+## Workflow and Dotfiles
 
-1. Understand and apply fundamental programming concepts.
-1. Develop problem-solving and algorithmic thinking skills.
-1. Gain proficiency in multiple programming languages and tools.
+- Dotfiles
+- Tools 
 
+## Books
 
-## Lessons
-::: {#lessons}
-:::
+- Reading List 
 
 
 ## Official Resources
 
-- [Python 3](https://www.python.org/)
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [Get Linux](https://ubuntu.com/desktop)
+- [Neovim](https://neovim.io/)
+- [LazyVim](https://www.lazyvim.org/)
+- [Obsidian Note Taking]()
 
 
-### Documentation and Tutorials
 
-- [DevDocs.io](https://devdocs.io/python~3.12/)
-- [Python Notes for Professionals](https://goalkicker.com/PythonBook/)
-- [Official Python Documentation](https://docs.python.org/)
-- [How to Python in VS Code](https://py-vscode.readthedocs.io/)
+## Awesome Resources 
+
+- [Hack the Box]()
+- [Cryptohack]()
+
