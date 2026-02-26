@@ -1,100 +1,30 @@
 [
   {
-    "objectID": "items/jhu.html",
-    "href": "items/jhu.html",
-    "title": "Drone Research at the JHU APL",
-    "section": "",
-    "text": "Summer Research at the John’s Hopkins Applied Physics Lab\n\n\n\n\nReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Drone Research at the JHU APL"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Al Schoenecke",
-    "section": "",
-    "text": "CS Department @ USMA",
-    "crumbs": [
-      "Al Schoenecke"
-    ]
-  },
-  {
-    "objectID": "index.html#current-projects",
-    "href": "index.html#current-projects",
-    "title": "Al Schoenecke",
-    "section": "Current Projects",
-    "text": "Current Projects\n\nMonopoly in Scala\neBPF Kernel Hacking",
-    "crumbs": [
-      "Al Schoenecke"
-    ]
-  },
-  {
-    "objectID": "index.html#workflow-and-dotfiles",
-    "href": "index.html#workflow-and-dotfiles",
-    "title": "Al Schoenecke",
-    "section": "Workflow and Dotfiles",
-    "text": "Workflow and Dotfiles\n\nDotfiles\nTools",
-    "crumbs": [
-      "Al Schoenecke"
-    ]
-  },
-  {
-    "objectID": "index.html#books",
-    "href": "index.html#books",
-    "title": "Al Schoenecke",
-    "section": "Books",
-    "text": "Books\n\nReading List",
-    "crumbs": [
-      "Al Schoenecke"
-    ]
-  },
-  {
-    "objectID": "index.html#official-resources",
-    "href": "index.html#official-resources",
-    "title": "Al Schoenecke",
-    "section": "Official Resources",
-    "text": "Official Resources\n\nGet Linux\nNeovim\nLazyVim\nObsidian Note Taking",
-    "crumbs": [
-      "Al Schoenecke"
-    ]
-  },
-  {
-    "objectID": "index.html#awesome-resources",
-    "href": "index.html#awesome-resources",
-    "title": "Al Schoenecke",
-    "section": "Awesome Resources",
-    "text": "Awesome Resources\n\nHack the Box\nCryptohack",
-    "crumbs": [
-      "Al Schoenecke"
-    ]
-  },
-  {
-    "objectID": "items/mpblinux.html",
-    "href": "items/mpblinux.html",
-    "title": "Linux Adventures on Apple Hardware",
-    "section": "",
-    "text": "Attemps at Installing Linux onto Apple Hardware\nThe key word here is “attempts”.\n\n\n\n\nReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Linux Adventures on Apple Hardware"
-    ]
-  },
-  {
     "objectID": "items/booklist.html",
     "href": "items/booklist.html",
     "title": "Reading List",
     "section": "",
-    "text": "Meditations of Marcus Aurelius\nDiscourses and Selected Writings by Epictetus\nTracers in the Dark by Andy Greenberg\n\n\n\n\n\nThe 48 Laws of Power by Robert Greene\nThe 33 Strategies of War by Robert Greene\nTranscending the Levels of Consciousness - the Stairway to Enlightenment\nMan’s Search for Meaning by Victor Frankl\n\n\n\n\n\nUnderstanding Cryptography: A Textbook for Students and Practitioners",
+    "text": "Meditations by Marcus Aurelius\nDiscourses and Selected Writings by Epictetus\n\n\n\n\n\nTracers in the Dark by Andy Greenberg\n\n\n\n\n\nThe 48 Laws of Power by Robert Greene\nThe 33 Strategies of War by Robert Greene\nTranscending the Levels of Consciousness - the Stairway to Enlightenment\nMan’s Search for Meaning by Victor Frankl\n\n\n\n\n\nUnderstanding Cryptography: A Textbook for Students and Practitioners",
     "crumbs": [
       "Reading List"
     ]
   },
   {
-    "objectID": "items/booklist.html#historical",
-    "href": "items/booklist.html#historical",
+    "objectID": "items/booklist.html#philosophy",
+    "href": "items/booklist.html#philosophy",
     "title": "Reading List",
     "section": "",
-    "text": "Meditations of Marcus Aurelius\nDiscourses and Selected Writings by Epictetus\nTracers in the Dark by Andy Greenberg",
+    "text": "Meditations by Marcus Aurelius\nDiscourses and Selected Writings by Epictetus",
+    "crumbs": [
+      "Reading List"
+    ]
+  },
+  {
+    "objectID": "items/booklist.html#historical-accounts",
+    "href": "items/booklist.html#historical-accounts",
+    "title": "Reading List",
+    "section": "",
+    "text": "Tracers in the Dark by Andy Greenberg",
     "crumbs": [
       "Reading List"
     ]
@@ -118,5 +48,127 @@
     "crumbs": [
       "Reading List"
     ]
+  },
+  {
+    "objectID": "items/tools.html",
+    "href": "items/tools.html",
+    "title": "Tools",
+    "section": "",
+    "text": "Vim, NeoVim\n\nIf you dislike the Vim editor or are unwilling to spend time configuring to your needs, at least learn the keybindings. They will save you significant amounts of time.\n\nTMUX\n\nTMUX is a must as it turns one terminal into many and can allow for better multitasking.\n\n[TMUX Cheat Sheet]\n\n\nGDB-GEF\n\nDynamic Reverse Engineering tool. Adding the GEF to GDB makes it an entirely different experience and greatly improves the base GDB program.\n\n\n\nReuseCC BY-NC-SA 4.0"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Al Schoenecke",
+    "section": "",
+    "text": "CS Department @ USMA",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
+  },
+  {
+    "objectID": "index.html#current-projects",
+    "href": "index.html#current-projects",
+    "title": "Al Schoenecke",
+    "section": "Current Projects",
+    "text": "Current Projects\n\nMonopoly in Scala\neBPF Kernel Hacking",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
+  },
+  {
+    "objectID": "index.html#custom-configurations",
+    "href": "index.html#custom-configurations",
+    "title": "Al Schoenecke",
+    "section": "Custom Configurations",
+    "text": "Custom Configurations\n\nDotfiles\nTools",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
+  },
+  {
+    "objectID": "index.html#writing-and-mindfulness",
+    "href": "index.html#writing-and-mindfulness",
+    "title": "Al Schoenecke",
+    "section": "Writing and Mindfulness",
+    "text": "Writing and Mindfulness\n\nJournals and Planners",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
+  },
+  {
+    "objectID": "index.html#workflow-and-environment",
+    "href": "index.html#workflow-and-environment",
+    "title": "Al Schoenecke",
+    "section": "Workflow and Environment",
+    "text": "Workflow and Environment\n\nGet Linux\nNeovim\nObsidian Note Taking",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
+  },
+  {
+    "objectID": "index.html#awesome-resources-for-learning",
+    "href": "index.html#awesome-resources-for-learning",
+    "title": "Al Schoenecke",
+    "section": "Awesome Resources for Learning",
+    "text": "Awesome Resources for Learning\n\nHack the Box\nCryptohack",
+    "crumbs": [
+      "Al Schoenecke"
+    ]
+  },
+  {
+    "objectID": "items/mpblinux.html",
+    "href": "items/mpblinux.html",
+    "title": "Linux Adventures on Apple Hardware",
+    "section": "",
+    "text": "Attemps at Installing Linux onto Apple Hardware\nThe key word here is “attempts”.\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Linux Adventures on Apple Hardware"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html",
+    "href": "items/jhu.html",
+    "title": "Drone Research at the JHU APL",
+    "section": "",
+    "text": "Summer Research at the John’s Hopkins Applied Physics Lab\n\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Drone Research at the JHU APL"
+    ]
+  },
+  {
+    "objectID": "items/dotfiles.html",
+    "href": "items/dotfiles.html",
+    "title": "Dotfiles",
+    "section": "",
+    "text": "Vim Plug is a minimalistic plugin manager that allows you to install plugins without creating an IDE out of Vim like LazyVim does.\nvim-plug - Config (init.vim)\n\" tab -&gt; 4 spaces\nset tabstop=4\nset shiftwidth=4\nset expandtab\n\n\" numbers + syntax highlighting + line endings\nset nu list\nsyntax on\n\nautocmd FileType markdown syntax match markdownBold /\\*\\*\\zs.*\\ze\\*\\*/ containedin=ALL | highlight markdownBold ctermfg=Magenta guifg=#FF69B4\n\ncall plug#begin()\n\nPlug 'tomasr/molokai'\nPlug 'vim-airline/vim-airline'\nPlug 'vim-airline/vim-airline-themes'\nPlug 'lervag/vimtex'\nPlug 'neanias/everforest-nvim', { 'branch': 'main' }\nPlug 'maxmx03/fluoromachine.nvim', { 'branch': 'main'}\nPlug 'loctvl842/monokai-pro.nvim'\n\ncall plug#end()\n\n\" theme\ncolorscheme monokai-pro-octagon\nlet g:rehash256 = 1\n\nhi Normal ctermbg=none\nhi NonText ctermbg=none\nhi LineNr ctermbg=none\n\n\" vimtex\nlet g:vimtex_view_method = 'zathura'\n\n\" airline\nlet airline_theme='minimalist'\n\n\" air-line\nlet g:airline_powerline_fonts = 1\n\nif !exists('g:airline_symbols')\n    let g:airline_symbols = {}\nendif\n\n\" unicode symbols\nlet g:airline_left_sep = '»'\nlet g:airline_left_sep = '▶'\nlet g:airline_right_sep = '«'\nlet g:airline_right_sep = '◀'\nlet g:airline_symbols.linenr = '␊'\nlet g:airline_symbols.linenr = '␤'\nlet g:airline_symbols.linenr = '¶'\nlet g:airline_symbols.branch = '⎇'\nlet g:airline_symbols.paste = 'ρ'\nlet g:airline_symbols.paste = 'Þ'\nlet g:airline_symbols.paste = '∥'\nlet g:airline_symbols.whitespace = 'Ξ'\n\n\" airline symbols\nlet g:airline_left_sep = ''\nlet g:airline_left_alt_sep = ''\nlet g:airline_right_sep = ''\nlet g:airline_right_alt_sep = ''\nlet g:airline_symbols.branch = ''\nlet g:airline_symbols.readonly = ''\nlet g:airline_symbols.linenr = ''\n\nset omnifunc=htmlcomplete#CompleteTags"
+  },
+  {
+    "objectID": "items/dotfiles.html#neovim-vim-plug",
+    "href": "items/dotfiles.html#neovim-vim-plug",
+    "title": "Dotfiles",
+    "section": "",
+    "text": "Vim Plug is a minimalistic plugin manager that allows you to install plugins without creating an IDE out of Vim like LazyVim does.\nvim-plug - Config (init.vim)\n\" tab -&gt; 4 spaces\nset tabstop=4\nset shiftwidth=4\nset expandtab\n\n\" numbers + syntax highlighting + line endings\nset nu list\nsyntax on\n\nautocmd FileType markdown syntax match markdownBold /\\*\\*\\zs.*\\ze\\*\\*/ containedin=ALL | highlight markdownBold ctermfg=Magenta guifg=#FF69B4\n\ncall plug#begin()\n\nPlug 'tomasr/molokai'\nPlug 'vim-airline/vim-airline'\nPlug 'vim-airline/vim-airline-themes'\nPlug 'lervag/vimtex'\nPlug 'neanias/everforest-nvim', { 'branch': 'main' }\nPlug 'maxmx03/fluoromachine.nvim', { 'branch': 'main'}\nPlug 'loctvl842/monokai-pro.nvim'\n\ncall plug#end()\n\n\" theme\ncolorscheme monokai-pro-octagon\nlet g:rehash256 = 1\n\nhi Normal ctermbg=none\nhi NonText ctermbg=none\nhi LineNr ctermbg=none\n\n\" vimtex\nlet g:vimtex_view_method = 'zathura'\n\n\" airline\nlet airline_theme='minimalist'\n\n\" air-line\nlet g:airline_powerline_fonts = 1\n\nif !exists('g:airline_symbols')\n    let g:airline_symbols = {}\nendif\n\n\" unicode symbols\nlet g:airline_left_sep = '»'\nlet g:airline_left_sep = '▶'\nlet g:airline_right_sep = '«'\nlet g:airline_right_sep = '◀'\nlet g:airline_symbols.linenr = '␊'\nlet g:airline_symbols.linenr = '␤'\nlet g:airline_symbols.linenr = '¶'\nlet g:airline_symbols.branch = '⎇'\nlet g:airline_symbols.paste = 'ρ'\nlet g:airline_symbols.paste = 'Þ'\nlet g:airline_symbols.paste = '∥'\nlet g:airline_symbols.whitespace = 'Ξ'\n\n\" airline symbols\nlet g:airline_left_sep = ''\nlet g:airline_left_alt_sep = ''\nlet g:airline_right_sep = ''\nlet g:airline_right_alt_sep = ''\nlet g:airline_symbols.branch = ''\nlet g:airline_symbols.readonly = ''\nlet g:airline_symbols.linenr = ''\n\nset omnifunc=htmlcomplete#CompleteTags"
+  },
+  {
+    "objectID": "items/dotfiles.html#neovim-lazyvim",
+    "href": "items/dotfiles.html#neovim-lazyvim",
+    "title": "Dotfiles",
+    "section": "Neovim + LazyVim",
+    "text": "Neovim + LazyVim\nLazyVim is a much more IDE like vim experience written in Lua. The kickstarter is nice and can be used well with little modification.\nLazy Vim Starter:\nLazyVim"
+  },
+  {
+    "objectID": "items/dotfiles.html#alacritty",
+    "href": "items/dotfiles.html#alacritty",
+    "title": "Dotfiles",
+    "section": "Alacritty",
+    "text": "Alacritty\nAlacritty is a beautiful terminal that is highly customizable and looks great.\nAlacritty"
+  },
+  {
+    "objectID": "items/dotfiles.html#tmux",
+    "href": "items/dotfiles.html#tmux",
+    "title": "Dotfiles",
+    "section": "TMUX",
+    "text": "TMUX\nBy using plugins TMUX can be improved visually as well as granted permanance, meaning sessions can be restored with ease. TPM Manager is the most straigtforward tmux plugin manager I have found.\nTPM"
   }
 ]

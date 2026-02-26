@@ -6,10 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-12-31">
-<meta name="description" content="My favorite books and reading materials">
+<meta name="description" content="Current Configurations for Useful Tools">
 
-<title>Reading List – schoenecke.dev</title>
+<title>Dotfiles – schoenecke.dev</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +21,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,7 +66,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../items/mpblinux.html" rel="prev">
 <link href="..//images/samurai.svg" rel="icon" type="image/svg+xml">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -80,10 +113,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Reading List – schoenecke.dev">
-<meta property="og:description" content="My favorite books and reading materials">
+<meta property="og:title" content="Dotfiles – schoenecke.dev">
+<meta property="og:description" content="Current Configurations for Useful Tools">
 <meta property="og:site_name" content="schoenecke.dev">
-<link rel="canonical" href="https://schoenecke.dev/items/booklist.html">
+<link rel="canonical" href="https://schoenecke.dev/items/dotfiles.html">
 </head>
 
 <body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -283,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../items/booklist.html">Reading List</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Dotfiles</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -321,7 +354,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../items/booklist.html" class="sidebar-item-text sidebar-link active">
+  <a href="../items/booklist.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Reading List</span></a>
   </div>
 </li>
@@ -335,14 +368,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#non-fiction" id="toc-non-fiction" class="nav-link active" data-scroll-target="#non-fiction">Non Fiction</a>
-  <ul class="collapse">
-  <li><a href="#philosophy" id="toc-philosophy" class="nav-link" data-scroll-target="#philosophy">Philosophy</a></li>
-  <li><a href="#historical-accounts" id="toc-historical-accounts" class="nav-link" data-scroll-target="#historical-accounts">Historical Accounts</a></li>
-  <li><a href="#psychology" id="toc-psychology" class="nav-link" data-scroll-target="#psychology">Psychology</a></li>
-  <li><a href="#math" id="toc-math" class="nav-link" data-scroll-target="#math">Math</a></li>
-  </ul></li>
-  <li><a href="#fiction" id="toc-fiction" class="nav-link" data-scroll-target="#fiction">Fiction</a></li>
+  <li><a href="#neovim-vim-plug" id="toc-neovim-vim-plug" class="nav-link active" data-scroll-target="#neovim-vim-plug">Neovim + vim-plug</a></li>
+  <li><a href="#neovim-lazyvim" id="toc-neovim-lazyvim" class="nav-link" data-scroll-target="#neovim-lazyvim">Neovim + LazyVim</a></li>
+  <li><a href="#alacritty" id="toc-alacritty" class="nav-link" data-scroll-target="#alacritty">Alacritty</a></li>
+  <li><a href="#tmux" id="toc-tmux" class="nav-link" data-scroll-target="#tmux">TMUX</a></li>
   </ul>
 </nav>
     </div>
@@ -352,12 +381,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Reading List</h1>
+<h1 class="title">Dotfiles</h1>
 </div>
 
 <div>
   <div class="description">
-    My favorite books and reading materials
+    Current Configurations for Useful Tools
   </div>
 </div>
 
@@ -365,12 +394,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta column-body">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 31, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -380,48 +403,94 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="non-fiction" class="level1">
-<h1>Non Fiction</h1>
-<section id="philosophy" class="level2">
-<h2 class="anchored" data-anchor-id="philosophy">Philosophy</h2>
-<ul>
-<li>Meditations by Marcus Aurelius</li>
-<li>Discourses and Selected Writings by Epictetus</li>
-</ul>
+<section id="neovim-vim-plug" class="level2">
+<h2 class="anchored" data-anchor-id="neovim-vim-plug">Neovim + vim-plug</h2>
+<p>Vim Plug is a minimalistic plugin manager that allows you to install plugins without creating an IDE out of Vim like LazyVim does.</p>
+<p><a href="https://github.com/junegunn/vim-plug">vim-plug</a> - Config (init.vim)</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">" tab -&gt; 4 spaces</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="er">set tabstop=4</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> shiftwidth<span class="op">=</span><span class="dv">4</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> expandtab</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">" numbers + syntax highlighting + line endings</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="er">set nu list</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>syntax on</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>autocmd FileType markdown syntax match markdownBold <span class="op">/</span>\<span class="op">*</span>\<span class="op">*</span>\zs.<span class="op">*</span>\ze\<span class="op">*</span>\<span class="op">*/</span> containedin<span class="op">=</span>ALL <span class="op">|</span> highlight markdownBold ctermfg<span class="op">=</span>Magenta guifg<span class="op">=</span><span class="co">#FF69B4</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>call plug<span class="co">#begin()</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>Plug <span class="st">'tomasr/molokai'</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>Plug <span class="st">'vim-airline/vim-airline'</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>Plug <span class="st">'vim-airline/vim-airline-themes'</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>Plug <span class="st">'lervag/vimtex'</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>Plug <span class="st">'neanias/everforest-nvim'</span>, { <span class="st">'branch'</span>: <span class="st">'main'</span> }</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>Plug <span class="st">'maxmx03/fluoromachine.nvim'</span>, { <span class="st">'branch'</span>: <span class="st">'main'</span>}</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>Plug <span class="st">'loctvl842/monokai-pro.nvim'</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>call plug<span class="co">#end()</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">" theme</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="er">colorscheme monokai-pro-octagon</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>let g:rehash256 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>hi Normal ctermbg<span class="op">=</span>none</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>hi NonText ctermbg<span class="op">=</span>none</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>hi LineNr ctermbg<span class="op">=</span>none</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">" vimtex</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="er">let g:vimtex_view_method = 'zathura'</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">" airline</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="er">let airline_theme='minimalist'</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">" air-line</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="er">let g:airline_powerline_fonts = 1</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="op">!</span>exists(<span class="st">'g:airline_symbols'</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    let g:airline_symbols <span class="op">=</span> {}</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>endif</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co">" unicode symbols</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="er">let g:airline_left_sep = '»'</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>let g:airline_left_sep <span class="op">=</span> <span class="st">'▶'</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>let g:airline_right_sep <span class="op">=</span> <span class="st">'«'</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>let g:airline_right_sep <span class="op">=</span> <span class="st">'◀'</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.linenr <span class="op">=</span> <span class="st">'␊'</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.linenr <span class="op">=</span> <span class="st">'␤'</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.linenr <span class="op">=</span> <span class="st">'¶'</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.branch <span class="op">=</span> <span class="st">'⎇'</span></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.paste <span class="op">=</span> <span class="st">'ρ'</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.paste <span class="op">=</span> <span class="st">'Þ'</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.paste <span class="op">=</span> <span class="st">'∥'</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.whitespace <span class="op">=</span> <span class="st">'Ξ'</span></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="co">" airline symbols</span></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="er">let g:airline_left_sep = ''</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>let g:airline_left_alt_sep <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>let g:airline_right_sep <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>let g:airline_right_alt_sep <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.branch <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.readonly <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>let g:airline_symbols.linenr <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a><span class="bu">set</span> omnifunc<span class="op">=</span>htmlcomplete<span class="co">#CompleteTags</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="historical-accounts" class="level2">
-<h2 class="anchored" data-anchor-id="historical-accounts">Historical Accounts</h2>
-<ul>
-<li>Tracers in the Dark by Andy Greenberg</li>
-</ul>
+<section id="neovim-lazyvim" class="level2">
+<h2 class="anchored" data-anchor-id="neovim-lazyvim">Neovim + LazyVim</h2>
+<p>LazyVim is a much more IDE like vim experience written in Lua. The kickstarter is nice and can be used well with little modification.</p>
+<p>Lazy Vim Starter:</p>
+<p><a href="https://www.lazyvim.org/">LazyVim</a></p>
 </section>
-<section id="psychology" class="level2">
-<h2 class="anchored" data-anchor-id="psychology">Psychology</h2>
-<ul>
-<li>The 48 Laws of Power by Robert Greene</li>
-<li>The 33 Strategies of War by Robert Greene</li>
-<li>Transcending the Levels of Consciousness - the Stairway to Enlightenment</li>
-<li>Man’s Search for Meaning by Victor Frankl</li>
-</ul>
+<section id="alacritty" class="level2">
+<h2 class="anchored" data-anchor-id="alacritty">Alacritty</h2>
+<p>Alacritty is a beautiful terminal that is highly customizable and looks great.</p>
+<p><a href="https://alacritty.org/">Alacritty</a></p>
 </section>
-<section id="math" class="level2">
-<h2 class="anchored" data-anchor-id="math">Math</h2>
-<ul>
-<li>Understanding Cryptography: A Textbook for Students and Practitioners</li>
-</ul>
-</section>
-</section>
-<section id="fiction" class="level1">
-<h1>Fiction</h1>
-<ul>
-<li>Frankeinstein by Mary Shelly (Original 1818 Version)</li>
-<li>Foundation by Isaac Asimov</li>
-<li>1982 by George Orwell</li>
-<li>Eragon by Christopher Paolini</li>
-<li>The Lord of the Rings Trilogy by J.R.R Tolkien</li>
-<li>Dune by Frank Herbert</li>
-<li>A Roadside Picnic by Arkady and Boris Strugatsky</li>
-</ul>
+<section id="tmux" class="level2">
+<h2 class="anchored" data-anchor-id="tmux">TMUX</h2>
+<p>By using plugins TMUX can be improved visually as well as granted permanance, meaning sessions can be restored with ease. TPM Manager is the most straigtforward tmux plugin manager I have found.</p>
+<p><a href="https://github.com/tmux-plugins/tpm">TPM</a></p>
 
 
 </section>
@@ -840,15 +909,6 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
-<nav class="page-navigation column-body">
-  <div class="nav-page nav-page-previous">
-      <a href="../items/mpblinux.html" class="pagination-link" aria-label="Linux Adventures on Apple Hardware">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Linux Adventures on Apple Hardware</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
