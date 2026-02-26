@@ -2,6 +2,7 @@ project:
   type: website
   render:
     - index.qmd
+    - items/
     - lessons/
   resources:
     - CNAME
@@ -14,11 +15,9 @@ project:
     timeout: 3600
 
 website:
-  title: Adventures in Computer Science
+  title: schoenecke.dev
   description: Development
-  # site-url: https://slides.example.com/
-  # image: /images/01.png
-  favicon: /images/favicon.svg
+  favicon: /images/samurai.svg
   page-footer: Alan Schoenecke, 2026
   page-navigation: true
   open-graph: true
@@ -29,11 +28,14 @@ website:
   sidebar:
     contents:
     - index.qmd
-    - /pages/books.qmd
+    - items/jhu.qmd
+    - items/mpblinux.qmd
+    - items/booklist.qmd
 
 format:
   html:
     canonical-url: true
+    css: styles.css
     license: CC BY-NC-SA
     toc: true
     toc-expand: 2

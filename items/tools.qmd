@@ -1,0 +1,19 @@
+---
+format: html
+title: Tools
+description: Tools that will make your life significantly easier
+---
+
+1. Vim, NeoVim
+
+If you dislike the Vim editor or are unwilling to spend time configuring to your needs, at least learn the keybindings. They will save you significant amounts of time.
+
+2. TMUX
+
+TMUX is a must as it turns one terminal into many and can allow for better multitasking.
+
+- [TMUX Cheat Sheet]
+
+3. GDB-GEF
+
+Dynamic Reverse Engineering tool. Adding the GEF to GDB makes it an entirely different experience and greatly improves the base GDB program.

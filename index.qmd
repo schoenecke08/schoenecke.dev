@@ -19,28 +19,26 @@ format:
 ## Current Projects
 
 - Monopoly in Scala
+- eBPF Kernel Hacking
 
-## Workflow and Dotfiles
+## Custom Configurations
 
-- Dotfiles
-- Tools 
+- [Dotfiles](items/dotfiles.qmd)
+- [Tools](items/tools.qmd) 
 
-## Books
+## Writing and Mindfulness
 
-- Reading List 
+- [Journals and Planners]()
 
-
-## Official Resources
+## Workflow and Environment
 
 - [Get Linux](https://ubuntu.com/desktop)
 - [Neovim](https://neovim.io/)
-- [LazyVim](https://www.lazyvim.org/)
-- [Obsidian Note Taking]()
+- [Obsidian Note Taking](https://obsidian.md/)
 
 
+## Awesome Resources for Learning
 
-## Awesome Resources 
-
-- [Hack the Box]()
-- [Cryptohack]()
+- [Hack the Box](https://www.hackthebox.com/)
+- [Cryptohack](https://cryptohack.org/)
 

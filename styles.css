@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --bs-font-sans-serif: "JetBrains Mono", monospace;
+  --bs-font-monospace: "JetBrains Mono", monospace;
+}
+
+body,
+.quarto-title-block,
+.navbar,
+.sidebar,
+.content,
+.page-columns {
+  font-family: "JetBrains Mono", monospace;
+}
+
+#headline .about-image img {
+  width: min(220px, 60vw);
+  height: min(220px, 60vw);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px !important;
+}
+
+.navbar .navbar-container {
+  position: relative;
+}
+
+.navbar .navbar-brand-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .navbar-brand {
+  margin: 0;
+}
+
+.navbar .navbar-brand-logo {
+  display: none;
+}

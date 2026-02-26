@@ -1,0 +1,7 @@
+---
+format: html
+title: Drone Research at the JHU APL
+description: Combining Steam Decks with Drone Tech for autonomous flight on the go
+date: 2026-2-25
+---
+# Summer Research at the John's Hopkins Applied Physics Lab

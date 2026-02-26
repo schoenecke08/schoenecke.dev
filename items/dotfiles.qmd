@@ -1,0 +1,99 @@
+---
+format: html
+title: Dotfiles
+description: Current Configurations for Useful Tools
+---
+
+## Neovim + vim-plug
+Vim Plug is a minimalistic plugin manager that allows you to install plugins without creating an IDE out of Vim like LazyVim does.
+
+[vim-plug](https://github.com/junegunn/vim-plug)
+- Config (init.vim)
+
+```python
+" tab -> 4 spaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" numbers + syntax highlighting + line endings
+set nu list
+syntax on
+
+autocmd FileType markdown syntax match markdownBold /\*\*\zs.*\ze\*\*/ containedin=ALL | highlight markdownBold ctermfg=Magenta guifg=#FF69B4
+
+call plug#begin()
+
+Plug 'tomasr/molokai'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'lervag/vimtex'
+Plug 'neanias/everforest-nvim', { 'branch': 'main' }
+Plug 'maxmx03/fluoromachine.nvim', { 'branch': 'main'}
+Plug 'loctvl842/monokai-pro.nvim'
+
+call plug#end()
+
+" theme
+colorscheme monokai-pro-octagon
+let g:rehash256 = 1
+
+hi Normal ctermbg=none
+hi NonText ctermbg=none
+hi LineNr ctermbg=none
+
+" vimtex
+let g:vimtex_view_method = 'zathura'
+
+" airline
+let airline_theme='minimalist'
+
+" air-line
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
+" airline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
+
+set omnifunc=htmlcomplete#CompleteTags
+```
+
+## Neovim + LazyVim
+LazyVim is a much more IDE like vim experience written in Lua. The kickstarter is nice and can be used well with little modification.
+
+Lazy Vim Starter:
+
+[LazyVim](https://www.lazyvim.org/)
+
+## Alacritty
+Alacritty is a beautiful terminal that is highly customizable and looks great. 
+
+[Alacritty](https://alacritty.org/)
+
+## TMUX
+By using plugins TMUX can be improved visually as well as granted permanance, meaning sessions can be restored with ease. TPM Manager is the most straigtforward tmux plugin manager I have found.
+
+[TPM](https://github.com/tmux-plugins/tpm)

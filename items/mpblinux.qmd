@@ -1,0 +1,9 @@
+---
+format: html
+title: Linux Adventures on Apple Hardware
+description: Research on Linux Compatibility with Apple Hardware
+date: 2026-2-25
+---
+# Attemps at Installing Linux onto Apple Hardware
+
+The key word here is "attempts".
