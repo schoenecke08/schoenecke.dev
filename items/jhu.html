@@ -6,10 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-25">
-<meta name="description" content="Combining Steam Decks with Drone Tech for autonomous flight on the go">
+<meta name="author" content="Alan Schoenecke">
+<meta name="dcterms.date" content="2025-06-01">
+<meta name="description" content="Combining Steam Decks with drone technology for autonomous flight on the go">
 
-<title>Drone Research at the JHU APL – schoenecke.dev</title>
+<title>APL Drone Development – schoenecke.dev</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -47,9 +83,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c7341b05cc3d5350899f06c5395eb159.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-37de7cbc388cd647a2bca639976e5a58.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-c7341b05cc3d5350899f06c5395eb159.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cd350a63679495fb00812865b89d905b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-cf14267739ab011b4e6d8080e82309c0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-cd350a63679495fb00812865b89d905b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,11 +114,16 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Drone Research at the JHU APL – schoenecke.dev">
-<meta property="og:description" content="Combining Steam Decks with Drone Tech for autonomous flight on the go">
+<meta property="og:title" content="APL Drone Development – schoenecke.dev">
+<meta property="og:description" content="Combining Steam Decks with drone technology for autonomous flight on the go">
+<meta property="og:image" content="https://schoenecke.dev/items/APL_Drone_Development/drone.jpg">
 <meta property="og:site_name" content="schoenecke.dev">
 <link rel="canonical" href="https://schoenecke.dev/items/jhu.html">
 </head>
@@ -284,7 +325,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../items/jhu.html">Drone Research at the JHU APL</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../items/jhu.html">APL Drone Development</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -311,7 +352,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../items/jhu.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Drone Research at the JHU APL</span></a>
+ <span class="menu-text">APL Drone Development</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -336,7 +377,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summer-research-at-the-johns-hopkins-applied-physics-lab" id="toc-summer-research-at-the-johns-hopkins-applied-physics-lab" class="nav-link active" data-scroll-target="#summer-research-at-the-johns-hopkins-applied-physics-lab">Summer Research at the John’s Hopkins Applied Physics Lab</a></li>
+  <li><a href="#apl-drone-development" id="toc-apl-drone-development" class="nav-link active" data-scroll-target="#apl-drone-development">APL Drone Development</a>
+  <ul class="collapse">
+  <li><a href="#summary-of-work-while-at-the-jhu-apl" id="toc-summary-of-work-while-at-the-jhu-apl" class="nav-link" data-scroll-target="#summary-of-work-while-at-the-jhu-apl">Summary of Work While at the JHU APL</a></li>
+  <li><a href="#drone-components" id="toc-drone-components" class="nav-link" data-scroll-target="#drone-components">Drone Components</a></li>
+  <li><a href="#first-problems-and-beginning-communication-with-the-drone" id="toc-first-problems-and-beginning-communication-with-the-drone" class="nav-link" data-scroll-target="#first-problems-and-beginning-communication-with-the-drone">First Problems and Beginning Communication with the Drone</a></li>
+  <li><a href="#using-the-steam-deck-to-control-the-drone-via-qgroundcontrol" id="toc-using-the-steam-deck-to-control-the-drone-via-qgroundcontrol" class="nav-link" data-scroll-target="#using-the-steam-deck-to-control-the-drone-via-qgroundcontrol">Using the Steam Deck to Control the Drone via QGroundControl</a></li>
+  <li><a href="#other-research-and-ideas-for-continued-development" id="toc-other-research-and-ideas-for-continued-development" class="nav-link" data-scroll-target="#other-research-and-ideas-for-continued-development">Other Research and Ideas for Continued Development</a></li>
+  <li><a href="#interfacing-with-the-drone-technical-information" id="toc-interfacing-with-the-drone-technical-information" class="nav-link" data-scroll-target="#interfacing-with-the-drone-technical-information">Interfacing With the Drone: Technical Information</a>
+  <ul class="collapse">
+  <li><a href="#connecting-to-the-drone-on-the-steam-deck-in-qgroundcontrol" id="toc-connecting-to-the-drone-on-the-steam-deck-in-qgroundcontrol" class="nav-link" data-scroll-target="#connecting-to-the-drone-on-the-steam-deck-in-qgroundcontrol">Connecting to the Drone on the Steam Deck in QGroundControl</a></li>
+  </ul></li>
+  <li><a href="#lessons-learned" id="toc-lessons-learned" class="nav-link" data-scroll-target="#lessons-learned">Lessons Learned</a></li>
+  <li><a href="#special-thanks" id="toc-special-thanks" class="nav-link" data-scroll-target="#special-thanks">Special Thanks</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -346,23 +400,29 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Drone Research at the JHU APL</h1>
+<h1 class="title">APL Drone Development</h1>
 </div>
 
 <div>
   <div class="description">
-    Combining Steam Decks with Drone Tech for autonomous flight on the go
+    Combining Steam Decks with drone technology for autonomous flight on the go
   </div>
 </div>
 
 
 <div class="quarto-title-meta column-body">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Alan Schoenecke </p>
+          </div>
+  </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 25, 2026</p>
+      <p class="date">June 1, 2025</p>
     </div>
   </div>
   
@@ -374,10 +434,171 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="summer-research-at-the-johns-hopkins-applied-physics-lab" class="level1">
-<h1>Summer Research at the John’s Hopkins Applied Physics Lab</h1>
+<section id="apl-drone-development" class="level1">
+<h1>APL Drone Development</h1>
+<section id="summary-of-work-while-at-the-jhu-apl" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-work-while-at-the-jhu-apl">Summary of Work While at the JHU APL</h2>
+<p>I worked at the Johns Hopkins Applied Physics Laboratory from June 10 to June 27. While there, I developed a quadcopter-style drone that demonstrated the ability for both autonomous and manual control from a Steam Deck controller. I established the data pathway between the Raspberry Pi and the Steam Deck, including the ability to use the joysticks in place of a radio controller to pilot the drone.</p>
+<p>In addition to the drone’s development, I was able to experiment with using Asahi Linux on an Apple Silicon MacBook Pro, as well as begin reverse engineering the ArduPilot firmware for the Beelink F504 board. I feel that the reverse engineering presents a viable future for research, and I would like to continue studying the platform to better understand its vulnerabilities and function.</p>
+</section>
+<section id="drone-components" class="level2">
+<h2 class="anchored" data-anchor-id="drone-components">Drone Components</h2>
+<p>I built an autonomous quadcopter-style drone with what I would refer to as a “spread X” shaped frame and four 2306 1755KV motors, making the drone in the 5-6 inch size range. The size metric refers to the propeller size, not the actual drone size itself.</p>
+<p>The physical components of the drone are as follows:</p>
+<ol type="1">
+<li>FC Stack: RADIX2HD</li>
+<li>Computer: Raspberry Pi 4</li>
+<li>Battery: CHNL 2200mAh 70C 7.4V Battery</li>
+<li>Motors: Flight XING2 2306 1755KV Drone Motor</li>
+<li>Camera: VIA Labs Camera</li>
+</ol>
+</section>
+<section id="first-problems-and-beginning-communication-with-the-drone" class="level2">
+<h2 class="anchored" data-anchor-id="first-problems-and-beginning-communication-with-the-drone">First Problems and Beginning Communication with the Drone</h2>
+<p>Upon assembly, I realized that the drone kit was missing several key components, first of which was the battery. I then performed research on the capabilities of the motors provided by the kit, and ordered the largest battery that I could find that provided the required voltage for the drone’s FC stack and motors. The large battery size provided additional range and ensured that the Raspberry Pi could be powered by the same battery as the FC stack assembly.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/drone.jpg" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Top view of fully constructed drone</figcaption>
+</figure>
+</div>
+<p>Next, I began tackling the communication problems. The documentation provided with the kit offered little to no actual documentation of how communication between devices and hardware would actually work, so I began researching and finally settled on QGroundControl as the flight software I would use on the computer itself. Before QGroundControl was useful, though, I needed to figure out how to connect the Raspberry Pi to the FC stack, and then the Pi to my computer where QGroundControl itself was running.</p>
+<p>When I got the Raspberry Pi, I was unable to get it to connect to the JHU network, so I began by getting the Pi connected to a monitor and setting up some of its local settings. Upon logging into the Pi for the first time, I had my first glimpse at some software produced by whoever had been working on the drone before me. It seemed like a Python-based, homemade attempt at QGroundControl. I connected the Pi to the JHU-Visitor network and then enabled SSH on the Pi so that I could connect to it from my development machine.</p>
+<p>After SSHing into the Pi, I used the command <code>lsusb</code> to determine the FC stack to be a RADIX2HD board running a version of ArduPilot as its firmware. I then spent time working with and reading the code for the GUI that was developed on the Raspberry Pi, and trying to get the drone to pass the pre-arm checks associated with arming from the Python script. However, I continually ran into the same issues with the ArduPilot firmware itself, which stopped me from being able to arm the drone with the home-built Python script.</p>
+<p>After several hours of manipulating the Python script, I researched the firmware more and found the <code>mavproxy.py</code> command, which I then installed onto the Pi. This allowed me to run <code>mavproxy.py</code>, which would immediately connect the Pi to the FC stack and allowed me to change variables in the firmware, fixing the pre-arm check errors. However, the home-built software was still not playing nicely with the stack or the MAVProxy protocol. So I scrapped it and began using QGroundControl full time instead, as it was a more robust and industry-developed option.</p>
+<p>In order to get QGroundControl to see the drone, I needed to route the MAVLink packets into one of the ports that QGroundControl looked at for connections. This led me to use the UDP protocol on port <code>14550</code>, which I was able to accomplish by specifying the drone as a device and then using several flags in addition to the <code>mavproxy.py</code> command on my computer. This then allowed me to open the QGroundControl window and connect immediately to the drone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/FC.jpg" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>The RADIX2FC flight stack. The SD card is where the firmware modules are flashed.</figcaption>
+</figure>
+</div>
+<p>The flight stack of the drone uses ArduPilot to connect to the Raspberry Pi for autonomous flight. The Raspberry Pi gives the drone the potential to connect to my computer running QGroundControl and facilitate waypoint-based flight. The Pi also allows for an LLM to be installed onto it in order to allow for autonomous flight capabilities. It also has image recognition software that allows the drone to label and categorize images into larger categories.</p>
+<p>I then needed to power the entire thing, Pi and all, from the same battery. Using a buck converter, I was able to assemble a wiring harness that allowed me to power the entire drone with the singular battery, despite the Pi needing a lower voltage than the FC stack. We did this by cutting an XT60 connector and splicing it into a smaller gauge wire, then running that into the converter. We then connected that to a USB-C stub cable and used it to power the Pi.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/wiring.jpg" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>The wiring harness built for the drone. Joe Duva helped me design this and provided the buck converter that I used.</figcaption>
+</figure>
+</div>
+</section>
+<section id="using-the-steam-deck-to-control-the-drone-via-qgroundcontrol" class="level2">
+<h2 class="anchored" data-anchor-id="using-the-steam-deck-to-control-the-drone-via-qgroundcontrol">Using the Steam Deck to Control the Drone via QGroundControl</h2>
+<p>Until this point I had been connecting to and working with the drone entirely from my laptop running Ubuntu 24.04. However, included with the drone kit was a Steam Deck that seemed to be running Ubuntu. It was locked, and no one had the password, so I used the Ubuntu recovery menu to reset the password. I then began poking around to see if I could make the same processes work from the Steam Deck instead of the computer.</p>
+<p>I quickly ran into several major roadblocks. For starters, using the <code>apt</code> command in any way resulted in an instant segmentation fault. Checking the package’s existence with <code>dpkg</code> was also confusing, as it listed the package as installed and existing. I got around this by downloading the <code>.deb</code> package from Ubuntu’s website and attempting to reinstall it with <code>dpkg</code> itself. This failed and gave me another set of errors, which required a different package. I downloaded that package and attempted to install it with <code>dpkg</code>, and got a different error that <code>dpkg</code> itself was corrupted. This led me to dig through the config files for <code>dpkg</code> itself, and realize that they had been completely corrupted.</p>
+<p>After this revelation, I was able to recompile <code>dpkg</code>, and then build both of my required packages to get <code>apt</code> working again. Things went much quicker after that, and I was able to install and start the SSH service on the Deck, and then actually update the entire system to Ubuntu 22.04, which was required to run QGroundControl. I then was able to both SSH into the Pi from the Deck as well as pass back the MAVProxy packets to the Deck, allowing for connection to QGC on the Deck. I was close, but I couldn’t get the joysticks to work, which was the entire reason for using the Steam Deck: to bypass the need for a second controller or radio to fly the drone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/deck.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Steam Deck running QGroundControl</figcaption>
+</figure>
+</div>
+<p>I began trying to get the joystick input drivers to work with QGC itself, but after a little while began to look for other options. Through some research, I realized that the Steam client could be used to run any program on the computer by loading it as a “non-Steam game.” This would allow the Steam client to import the Steam Deck’s controls into the application, as the client would run it in the same environment as it would run any video game. This gave me the ability to use the joysticks as the radio controls for the drone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/steamQGC.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>QGroundControl as a Steam game in my library</figcaption>
+</figure>
+</div>
+<p>After getting the joysticks to work, I was able to pass all pre-flight checks aside from the GPS requirement, and actually execute a full launch sequence while the drone was taped down on the desk. It is very close to being completed.</p>
+</section>
+<section id="other-research-and-ideas-for-continued-development" class="level2">
+<h2 class="anchored" data-anchor-id="other-research-and-ideas-for-continued-development">Other Research and Ideas for Continued Development</h2>
+<p>In between getting cables and other physical supplies I needed for the drone, I was able to work on a few smaller projects. The first was installing Asahi Linux onto a 16-inch M1 Max MacBook Pro, which I did to test the distro as well as using Linux on the ARM-based processor. Asahi uses Fedora 42 as the kernel and GNOME as the stock window manager. Its limitations are that the MacBook Pro cannot use Thunderbolt or USB-C ports for additional displays, or run virtual machines, as the ARM-based architecture is not overly developed with Linux packages. While there may be a way to make QEMU or Virt-Manager work on the ARM-based Fedora install, I was unable to figure it out in the time I had before I was back to working on the drone. If VM support was available, it would greatly improve the usefulness of the MacBook Pro and make the device more worth its large price tag.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/AshaiMBP.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>M1 Pro MacBook Pro running Fedora 42 with Sway and Alacritty</figcaption>
+</figure>
+</div>
+<p>Secondly, I was able to take some of the Arduino ArduCopter firmware and begin reverse engineering it. I think that this area of vulnerability analysis would be an extremely fruitful area of research, and that better understanding the weaknesses with drone firmware could lead to breakthroughs in drone deterrence for both the private and military sectors.</p>
+<p>As for the drone, next steps would include porting the camera into the QGroundControl application, as well as installing a GPS module and getting an antenna or radio to allow for communication without Wi-Fi. This would require some development on the Steam Deck as well, as I am unsure how that platform would work with a different antenna. A mesh network would also be interesting to investigate. I also would love to see what we could do with different scanners or radar on the actual drone, like a LiDAR scanner or infrared capabilities.</p>
+</section>
+<section id="interfacing-with-the-drone-technical-information" class="level2">
+<h2 class="anchored" data-anchor-id="interfacing-with-the-drone-technical-information">Interfacing With the Drone: Technical Information</h2>
+<p>The drone uses the following communication stack:</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+  pc["Ground Station&lt;br/&gt;(Steam Deck with QGroundControl)"]
+  pi["Raspberry Pi&lt;br/&gt;(Onboard Computer)"]
+  fc["Flight Controller&lt;br/&gt;(RADIX2HD)"]
+
+  pc --&gt;|"UDP / SSH via Wi-Fi&lt;br/&gt;port 14550"| pi
+  pi --&gt;|"UART / MAVLink&lt;br/&gt;/dev/ttyACM0"| fc
+  fc --&gt;|"Telemetry / Sensor Data"| pi
+  pi --&gt;|"Telemetry / MAVLink"| pc
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<section id="connecting-to-the-drone-on-the-steam-deck-in-qgroundcontrol" class="level3">
+<h3 class="anchored" data-anchor-id="connecting-to-the-drone-on-the-steam-deck-in-qgroundcontrol">Connecting to the Drone on the Steam Deck in QGroundControl</h3>
+<ol type="1">
+<li><p>SSH into the drone using the <code>-X</code> flag so that an X server is generated for the Raspberry Pi. The Raspberry Pi has its own drone control app that starts on login. Its only usage at this time is to operate the camera, and it does not succeed in arming the drone.</p></li>
+<li><p>Exit the spawned window for controlling the drone.</p></li>
+<li><p>Run the following command to connect to the drone via MAVProxy and forward the data back to the computer at port <code>14550</code>, which is how the drone connects to QGroundControl:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">mavproxy.py</span> <span class="at">--master</span><span class="op">=</span>/dev/<span class="op">&lt;</span>location_of_drone<span class="op">&gt;</span> <span class="dt">\</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">--baudrate</span> 57600 <span class="dt">\</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">--out</span><span class="op">=</span>udp:<span class="op">&lt;</span>pc_ip<span class="op">&gt;</span>:14550</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Navigate to the Steam client. Open the client and go to your library.</p></li>
+<li><p>Click the plus button and add the QGroundControl AppImage as a game.</p></li>
+<li><p>Open the controller settings and make sure that it is being run with “Gamepad with Joystick Trackpad” mode enabled. Close the window.</p></li>
+<li><p>Under settings, open properties/controller. Next to the “Override for QGC inputs” section, choose “Enable Steam Input” from the dropdown menu.</p></li>
+<li><p>Run QGroundControl from the Steam launcher.</p></li>
+<li><p>QGroundControl should automatically connect to the drone, as the packets are being forwarded at port <code>14550</code>.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/steam-mavlink.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>QGroundControl in the Steam Library with the MAVLink command prepared</figcaption>
+</figure>
+</div>
+<p>Once QGroundControl is connected:</p>
+<ol type="1">
+<li>Inside QGC, enable centered joysticks for throttle control, and then check to see that the inputs are being mapped to QGC from the live menu.</li>
+<li>Calibrate the radio inputs in the vehicle settings. Do not hold the throttle to the bottom of the bowl when shown. Allow the program to equalize with the stick in its resting position, and it will calibrate without issue.</li>
+<li>Fly the drone.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/getingJoysticks.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Controller configuration. Calibration here before the radio is a good idea.</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="APL_Drone_Development/radioconf.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption>Calibrating the joysticks as the drone’s radio</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="lessons-learned" class="level2">
+<h2 class="anchored" data-anchor-id="lessons-learned">Lessons Learned</h2>
+<p>I had a blast on this project and learned a great deal about drones, as well as ways that I could continue developing as both a computer scientist and an engineer. I had never been able to both build and code something before, and I found out that I loved it, as it brought together both my mechanical skill set and my CS abilities. I have found something I am passionate about and will be continuing to build devices, hopefully drones and other robots in the future.</p>
+<p>I also learned a ton of Python from working on the MAVLink protocol, as well as a deeper understanding of communication and how signals can be passed over SSH to different programs. I used a great deal of my Linux knowledge and fixed a more complex problem than I had ever come across on the Steam Deck, which I really enjoyed as well. Finally, I found a huge category of things to reverse engineer, and will be looking deeper into drone firmware when I get time. I think that there is so much to see and exploit in cheap drone hardware, and I would love to spend more time actually exploring that area of cybersecurity and vulnerability research.</p>
+</section>
+<section id="special-thanks" class="level2">
+<h2 class="anchored" data-anchor-id="special-thanks">Special Thanks</h2>
+<p><strong>Joe Duva</strong>, who served as my project mentor for this work. Joe brought me tools from home and consistently assisted me in thinking better about my work, as well as engineering better solutions when I was stuck.</p>
+<p><strong>Will Gray-Roncall</strong>, who ordered me a ton of wiring, batteries, and everything else I needed, as well as allowed me to work on a drone in the first place. I am so glad he had it in the closet.</p>
+<p><strong>Blake</strong>, who got me the MacBook Pro from surplus and walked around with me to see the semiconductor foundries in building 13. Enjoy the Asahi MBP.</p>
+<style>
+.mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+</style>
 
 
+</section>
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div><a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></section></div></main> <!-- /main -->

@@ -1,38 +1,53 @@
 [
   {
-    "objectID": "items/dotfiles.html",
-    "href": "items/dotfiles.html",
-    "title": "Dotfiles",
+    "objectID": "items/booklist.html",
+    "href": "items/booklist.html",
+    "title": "Reading List",
     "section": "",
-    "text": "Vim Plug is a minimalistic plugin manager that allows you to install plugins without creating an IDE out of Vim like LazyVim does.\nvim-plug - Config (init.vim)\n\" tab -&gt; 4 spaces\nset tabstop=4\nset shiftwidth=4\nset expandtab\n\n\" numbers + syntax highlighting + line endings\nset nu list\nsyntax on\n\nautocmd FileType markdown syntax match markdownBold /\\*\\*\\zs.*\\ze\\*\\*/ containedin=ALL | highlight markdownBold ctermfg=Magenta guifg=#FF69B4\n\ncall plug#begin()\n\nPlug 'tomasr/molokai'\nPlug 'vim-airline/vim-airline'\nPlug 'vim-airline/vim-airline-themes'\nPlug 'lervag/vimtex'\nPlug 'neanias/everforest-nvim', { 'branch': 'main' }\nPlug 'maxmx03/fluoromachine.nvim', { 'branch': 'main'}\nPlug 'loctvl842/monokai-pro.nvim'\n\ncall plug#end()\n\n\" theme\ncolorscheme monokai-pro-octagon\nlet g:rehash256 = 1\n\nhi Normal ctermbg=none\nhi NonText ctermbg=none\nhi LineNr ctermbg=none\n\n\" vimtex\nlet g:vimtex_view_method = 'zathura'\n\n\" airline\nlet airline_theme='minimalist'\n\n\" air-line\nlet g:airline_powerline_fonts = 1\n\nif !exists('g:airline_symbols')\n    let g:airline_symbols = {}\nendif\n\n\" unicode symbols\nlet g:airline_left_sep = '»'\nlet g:airline_left_sep = '▶'\nlet g:airline_right_sep = '«'\nlet g:airline_right_sep = '◀'\nlet g:airline_symbols.linenr = '␊'\nlet g:airline_symbols.linenr = '␤'\nlet g:airline_symbols.linenr = '¶'\nlet g:airline_symbols.branch = '⎇'\nlet g:airline_symbols.paste = 'ρ'\nlet g:airline_symbols.paste = 'Þ'\nlet g:airline_symbols.paste = '∥'\nlet g:airline_symbols.whitespace = 'Ξ'\n\n\" airline symbols\nlet g:airline_left_sep = ''\nlet g:airline_left_alt_sep = ''\nlet g:airline_right_sep = ''\nlet g:airline_right_alt_sep = ''\nlet g:airline_symbols.branch = ''\nlet g:airline_symbols.readonly = ''\nlet g:airline_symbols.linenr = ''\n\nset omnifunc=htmlcomplete#CompleteTags"
+    "text": "Meditations by Marcus Aurelius\nDiscourses and Selected Writings by Epictetus\n\n\n\n\n\nTracers in the Dark by Andy Greenberg\n\n\n\n\n\nThe 48 Laws of Power by Robert Greene\nThe 33 Strategies of War by Robert Greene\nTranscending the Levels of Consciousness - the Stairway to Enlightenment\nMan’s Search for Meaning by Victor Frankl\n\n\n\n\n\nUnderstanding Cryptography: A Textbook for Students and Practitioners",
+    "crumbs": [
+      "Reading List"
+    ]
   },
   {
-    "objectID": "items/dotfiles.html#neovim-vim-plug",
-    "href": "items/dotfiles.html#neovim-vim-plug",
-    "title": "Dotfiles",
+    "objectID": "items/booklist.html#philosophy",
+    "href": "items/booklist.html#philosophy",
+    "title": "Reading List",
     "section": "",
-    "text": "Vim Plug is a minimalistic plugin manager that allows you to install plugins without creating an IDE out of Vim like LazyVim does.\nvim-plug - Config (init.vim)\n\" tab -&gt; 4 spaces\nset tabstop=4\nset shiftwidth=4\nset expandtab\n\n\" numbers + syntax highlighting + line endings\nset nu list\nsyntax on\n\nautocmd FileType markdown syntax match markdownBold /\\*\\*\\zs.*\\ze\\*\\*/ containedin=ALL | highlight markdownBold ctermfg=Magenta guifg=#FF69B4\n\ncall plug#begin()\n\nPlug 'tomasr/molokai'\nPlug 'vim-airline/vim-airline'\nPlug 'vim-airline/vim-airline-themes'\nPlug 'lervag/vimtex'\nPlug 'neanias/everforest-nvim', { 'branch': 'main' }\nPlug 'maxmx03/fluoromachine.nvim', { 'branch': 'main'}\nPlug 'loctvl842/monokai-pro.nvim'\n\ncall plug#end()\n\n\" theme\ncolorscheme monokai-pro-octagon\nlet g:rehash256 = 1\n\nhi Normal ctermbg=none\nhi NonText ctermbg=none\nhi LineNr ctermbg=none\n\n\" vimtex\nlet g:vimtex_view_method = 'zathura'\n\n\" airline\nlet airline_theme='minimalist'\n\n\" air-line\nlet g:airline_powerline_fonts = 1\n\nif !exists('g:airline_symbols')\n    let g:airline_symbols = {}\nendif\n\n\" unicode symbols\nlet g:airline_left_sep = '»'\nlet g:airline_left_sep = '▶'\nlet g:airline_right_sep = '«'\nlet g:airline_right_sep = '◀'\nlet g:airline_symbols.linenr = '␊'\nlet g:airline_symbols.linenr = '␤'\nlet g:airline_symbols.linenr = '¶'\nlet g:airline_symbols.branch = '⎇'\nlet g:airline_symbols.paste = 'ρ'\nlet g:airline_symbols.paste = 'Þ'\nlet g:airline_symbols.paste = '∥'\nlet g:airline_symbols.whitespace = 'Ξ'\n\n\" airline symbols\nlet g:airline_left_sep = ''\nlet g:airline_left_alt_sep = ''\nlet g:airline_right_sep = ''\nlet g:airline_right_alt_sep = ''\nlet g:airline_symbols.branch = ''\nlet g:airline_symbols.readonly = ''\nlet g:airline_symbols.linenr = ''\n\nset omnifunc=htmlcomplete#CompleteTags"
+    "text": "Meditations by Marcus Aurelius\nDiscourses and Selected Writings by Epictetus",
+    "crumbs": [
+      "Reading List"
+    ]
   },
   {
-    "objectID": "items/dotfiles.html#neovim-lazyvim",
-    "href": "items/dotfiles.html#neovim-lazyvim",
-    "title": "Dotfiles",
-    "section": "Neovim + LazyVim",
-    "text": "Neovim + LazyVim\nLazyVim is a much more IDE like vim experience written in Lua. The kickstarter is nice and can be used well with little modification.\nLazy Vim Starter:\nLazyVim"
+    "objectID": "items/booklist.html#historical-accounts",
+    "href": "items/booklist.html#historical-accounts",
+    "title": "Reading List",
+    "section": "",
+    "text": "Tracers in the Dark by Andy Greenberg",
+    "crumbs": [
+      "Reading List"
+    ]
   },
   {
-    "objectID": "items/dotfiles.html#alacritty",
-    "href": "items/dotfiles.html#alacritty",
-    "title": "Dotfiles",
-    "section": "Alacritty",
-    "text": "Alacritty\nAlacritty is a beautiful terminal that is highly customizable and looks great.\nAlacritty"
+    "objectID": "items/booklist.html#psychology",
+    "href": "items/booklist.html#psychology",
+    "title": "Reading List",
+    "section": "",
+    "text": "The 48 Laws of Power by Robert Greene\nThe 33 Strategies of War by Robert Greene\nTranscending the Levels of Consciousness - the Stairway to Enlightenment\nMan’s Search for Meaning by Victor Frankl",
+    "crumbs": [
+      "Reading List"
+    ]
   },
   {
-    "objectID": "items/dotfiles.html#tmux",
-    "href": "items/dotfiles.html#tmux",
-    "title": "Dotfiles",
-    "section": "TMUX",
-    "text": "TMUX\nBy using plugins TMUX can be improved visually as well as granted permanance, meaning sessions can be restored with ease. TPM Manager is the most straigtforward tmux plugin manager I have found.\nTPM"
+    "objectID": "items/booklist.html#math",
+    "href": "items/booklist.html#math",
+    "title": "Reading List",
+    "section": "",
+    "text": "Understanding Cryptography: A Textbook for Students and Practitioners",
+    "crumbs": [
+      "Reading List"
+    ]
   },
   {
     "objectID": "items/tools.html",
@@ -102,66 +117,6 @@
     ]
   },
   {
-    "objectID": "items/booklist.html",
-    "href": "items/booklist.html",
-    "title": "Reading List",
-    "section": "",
-    "text": "Meditations by Marcus Aurelius\nDiscourses and Selected Writings by Epictetus\n\n\n\n\n\nTracers in the Dark by Andy Greenberg\n\n\n\n\n\nThe 48 Laws of Power by Robert Greene\nThe 33 Strategies of War by Robert Greene\nTranscending the Levels of Consciousness - the Stairway to Enlightenment\nMan’s Search for Meaning by Victor Frankl\n\n\n\n\n\nUnderstanding Cryptography: A Textbook for Students and Practitioners",
-    "crumbs": [
-      "Reading List"
-    ]
-  },
-  {
-    "objectID": "items/booklist.html#philosophy",
-    "href": "items/booklist.html#philosophy",
-    "title": "Reading List",
-    "section": "",
-    "text": "Meditations by Marcus Aurelius\nDiscourses and Selected Writings by Epictetus",
-    "crumbs": [
-      "Reading List"
-    ]
-  },
-  {
-    "objectID": "items/booklist.html#historical-accounts",
-    "href": "items/booklist.html#historical-accounts",
-    "title": "Reading List",
-    "section": "",
-    "text": "Tracers in the Dark by Andy Greenberg",
-    "crumbs": [
-      "Reading List"
-    ]
-  },
-  {
-    "objectID": "items/booklist.html#psychology",
-    "href": "items/booklist.html#psychology",
-    "title": "Reading List",
-    "section": "",
-    "text": "The 48 Laws of Power by Robert Greene\nThe 33 Strategies of War by Robert Greene\nTranscending the Levels of Consciousness - the Stairway to Enlightenment\nMan’s Search for Meaning by Victor Frankl",
-    "crumbs": [
-      "Reading List"
-    ]
-  },
-  {
-    "objectID": "items/booklist.html#math",
-    "href": "items/booklist.html#math",
-    "title": "Reading List",
-    "section": "",
-    "text": "Understanding Cryptography: A Textbook for Students and Practitioners",
-    "crumbs": [
-      "Reading List"
-    ]
-  },
-  {
-    "objectID": "items/jhu.html",
-    "href": "items/jhu.html",
-    "title": "Drone Research at the JHU APL",
-    "section": "",
-    "text": "Summer Research at the John’s Hopkins Applied Physics Lab\n\n\n\n\nReuseCC BY-NC-SA 4.0",
-    "crumbs": [
-      "Drone Research at the JHU APL"
-    ]
-  },
-  {
     "objectID": "items/mpblinux.html",
     "href": "items/mpblinux.html",
     "title": "Linux Adventures on Apple Hardware",
@@ -170,5 +125,130 @@
     "crumbs": [
       "Linux Adventures on Apple Hardware"
     ]
+  },
+  {
+    "objectID": "items/jhu.html",
+    "href": "items/jhu.html",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "I worked at the Johns Hopkins Applied Physics Laboratory from June 10 to June 27. While there, I developed a quadcopter-style drone that demonstrated the ability for both autonomous and manual control from a Steam Deck controller. I established the data pathway between the Raspberry Pi and the Steam Deck, including the ability to use the joysticks in place of a radio controller to pilot the drone.\nIn addition to the drone’s development, I was able to experiment with using Asahi Linux on an Apple Silicon MacBook Pro, as well as begin reverse engineering the ArduPilot firmware for the Beelink F504 board. I feel that the reverse engineering presents a viable future for research, and I would like to continue studying the platform to better understand its vulnerabilities and function.\n\n\n\nI built an autonomous quadcopter-style drone with what I would refer to as a “spread X” shaped frame and four 2306 1755KV motors, making the drone in the 5-6 inch size range. The size metric refers to the propeller size, not the actual drone size itself.\nThe physical components of the drone are as follows:\n\nFC Stack: RADIX2HD\nComputer: Raspberry Pi 4\nBattery: CHNL 2200mAh 70C 7.4V Battery\nMotors: Flight XING2 2306 1755KV Drone Motor\nCamera: VIA Labs Camera\n\n\n\n\nUpon assembly, I realized that the drone kit was missing several key components, first of which was the battery. I then performed research on the capabilities of the motors provided by the kit, and ordered the largest battery that I could find that provided the required voltage for the drone’s FC stack and motors. The large battery size provided additional range and ensured that the Raspberry Pi could be powered by the same battery as the FC stack assembly.\n\n\n\nTop view of fully constructed drone\n\n\nNext, I began tackling the communication problems. The documentation provided with the kit offered little to no actual documentation of how communication between devices and hardware would actually work, so I began researching and finally settled on QGroundControl as the flight software I would use on the computer itself. Before QGroundControl was useful, though, I needed to figure out how to connect the Raspberry Pi to the FC stack, and then the Pi to my computer where QGroundControl itself was running.\nWhen I got the Raspberry Pi, I was unable to get it to connect to the JHU network, so I began by getting the Pi connected to a monitor and setting up some of its local settings. Upon logging into the Pi for the first time, I had my first glimpse at some software produced by whoever had been working on the drone before me. It seemed like a Python-based, homemade attempt at QGroundControl. I connected the Pi to the JHU-Visitor network and then enabled SSH on the Pi so that I could connect to it from my development machine.\nAfter SSHing into the Pi, I used the command lsusb to determine the FC stack to be a RADIX2HD board running a version of ArduPilot as its firmware. I then spent time working with and reading the code for the GUI that was developed on the Raspberry Pi, and trying to get the drone to pass the pre-arm checks associated with arming from the Python script. However, I continually ran into the same issues with the ArduPilot firmware itself, which stopped me from being able to arm the drone with the home-built Python script.\nAfter several hours of manipulating the Python script, I researched the firmware more and found the mavproxy.py command, which I then installed onto the Pi. This allowed me to run mavproxy.py, which would immediately connect the Pi to the FC stack and allowed me to change variables in the firmware, fixing the pre-arm check errors. However, the home-built software was still not playing nicely with the stack or the MAVProxy protocol. So I scrapped it and began using QGroundControl full time instead, as it was a more robust and industry-developed option.\nIn order to get QGroundControl to see the drone, I needed to route the MAVLink packets into one of the ports that QGroundControl looked at for connections. This led me to use the UDP protocol on port 14550, which I was able to accomplish by specifying the drone as a device and then using several flags in addition to the mavproxy.py command on my computer. This then allowed me to open the QGroundControl window and connect immediately to the drone.\n\n\n\nThe RADIX2FC flight stack. The SD card is where the firmware modules are flashed.\n\n\nThe flight stack of the drone uses ArduPilot to connect to the Raspberry Pi for autonomous flight. The Raspberry Pi gives the drone the potential to connect to my computer running QGroundControl and facilitate waypoint-based flight. The Pi also allows for an LLM to be installed onto it in order to allow for autonomous flight capabilities. It also has image recognition software that allows the drone to label and categorize images into larger categories.\nI then needed to power the entire thing, Pi and all, from the same battery. Using a buck converter, I was able to assemble a wiring harness that allowed me to power the entire drone with the singular battery, despite the Pi needing a lower voltage than the FC stack. We did this by cutting an XT60 connector and splicing it into a smaller gauge wire, then running that into the converter. We then connected that to a USB-C stub cable and used it to power the Pi.\n\n\n\nThe wiring harness built for the drone. Joe Duva helped me design this and provided the buck converter that I used.\n\n\n\n\n\nUntil this point I had been connecting to and working with the drone entirely from my laptop running Ubuntu 24.04. However, included with the drone kit was a Steam Deck that seemed to be running Ubuntu. It was locked, and no one had the password, so I used the Ubuntu recovery menu to reset the password. I then began poking around to see if I could make the same processes work from the Steam Deck instead of the computer.\nI quickly ran into several major roadblocks. For starters, using the apt command in any way resulted in an instant segmentation fault. Checking the package’s existence with dpkg was also confusing, as it listed the package as installed and existing. I got around this by downloading the .deb package from Ubuntu’s website and attempting to reinstall it with dpkg itself. This failed and gave me another set of errors, which required a different package. I downloaded that package and attempted to install it with dpkg, and got a different error that dpkg itself was corrupted. This led me to dig through the config files for dpkg itself, and realize that they had been completely corrupted.\nAfter this revelation, I was able to recompile dpkg, and then build both of my required packages to get apt working again. Things went much quicker after that, and I was able to install and start the SSH service on the Deck, and then actually update the entire system to Ubuntu 22.04, which was required to run QGroundControl. I then was able to both SSH into the Pi from the Deck as well as pass back the MAVProxy packets to the Deck, allowing for connection to QGC on the Deck. I was close, but I couldn’t get the joysticks to work, which was the entire reason for using the Steam Deck: to bypass the need for a second controller or radio to fly the drone.\n\n\n\nSteam Deck running QGroundControl\n\n\nI began trying to get the joystick input drivers to work with QGC itself, but after a little while began to look for other options. Through some research, I realized that the Steam client could be used to run any program on the computer by loading it as a “non-Steam game.” This would allow the Steam client to import the Steam Deck’s controls into the application, as the client would run it in the same environment as it would run any video game. This gave me the ability to use the joysticks as the radio controls for the drone.\n\n\n\nQGroundControl as a Steam game in my library\n\n\nAfter getting the joysticks to work, I was able to pass all pre-flight checks aside from the GPS requirement, and actually execute a full launch sequence while the drone was taped down on the desk. It is very close to being completed.\n\n\n\nIn between getting cables and other physical supplies I needed for the drone, I was able to work on a few smaller projects. The first was installing Asahi Linux onto a 16-inch M1 Max MacBook Pro, which I did to test the distro as well as using Linux on the ARM-based processor. Asahi uses Fedora 42 as the kernel and GNOME as the stock window manager. Its limitations are that the MacBook Pro cannot use Thunderbolt or USB-C ports for additional displays, or run virtual machines, as the ARM-based architecture is not overly developed with Linux packages. While there may be a way to make QEMU or Virt-Manager work on the ARM-based Fedora install, I was unable to figure it out in the time I had before I was back to working on the drone. If VM support was available, it would greatly improve the usefulness of the MacBook Pro and make the device more worth its large price tag.\n\n\n\nM1 Pro MacBook Pro running Fedora 42 with Sway and Alacritty\n\n\nSecondly, I was able to take some of the Arduino ArduCopter firmware and begin reverse engineering it. I think that this area of vulnerability analysis would be an extremely fruitful area of research, and that better understanding the weaknesses with drone firmware could lead to breakthroughs in drone deterrence for both the private and military sectors.\nAs for the drone, next steps would include porting the camera into the QGroundControl application, as well as installing a GPS module and getting an antenna or radio to allow for communication without Wi-Fi. This would require some development on the Steam Deck as well, as I am unsure how that platform would work with a different antenna. A mesh network would also be interesting to investigate. I also would love to see what we could do with different scanners or radar on the actual drone, like a LiDAR scanner or infrared capabilities.\n\n\n\nThe drone uses the following communication stack:\n\n\n\n\n\nflowchart TB\n  pc[\"Ground Station&lt;br/&gt;(Steam Deck with QGroundControl)\"]\n  pi[\"Raspberry Pi&lt;br/&gt;(Onboard Computer)\"]\n  fc[\"Flight Controller&lt;br/&gt;(RADIX2HD)\"]\n\n  pc --&gt;|\"UDP / SSH via Wi-Fi&lt;br/&gt;port 14550\"| pi\n  pi --&gt;|\"UART / MAVLink&lt;br/&gt;/dev/ttyACM0\"| fc\n  fc --&gt;|\"Telemetry / Sensor Data\"| pi\n  pi --&gt;|\"Telemetry / MAVLink\"| pc\n\n\n\n\n\n\n\n\n\nSSH into the drone using the -X flag so that an X server is generated for the Raspberry Pi. The Raspberry Pi has its own drone control app that starts on login. Its only usage at this time is to operate the camera, and it does not succeed in arming the drone.\nExit the spawned window for controlling the drone.\nRun the following command to connect to the drone via MAVProxy and forward the data back to the computer at port 14550, which is how the drone connects to QGroundControl:\nmavproxy.py --master=/dev/&lt;location_of_drone&gt; \\\n  --baudrate 57600 \\\n  --out=udp:&lt;pc_ip&gt;:14550\nNavigate to the Steam client. Open the client and go to your library.\nClick the plus button and add the QGroundControl AppImage as a game.\nOpen the controller settings and make sure that it is being run with “Gamepad with Joystick Trackpad” mode enabled. Close the window.\nUnder settings, open properties/controller. Next to the “Override for QGC inputs” section, choose “Enable Steam Input” from the dropdown menu.\nRun QGroundControl from the Steam launcher.\nQGroundControl should automatically connect to the drone, as the packets are being forwarded at port 14550.\n\n\n\n\nQGroundControl in the Steam Library with the MAVLink command prepared\n\n\nOnce QGroundControl is connected:\n\nInside QGC, enable centered joysticks for throttle control, and then check to see that the inputs are being mapped to QGC from the live menu.\nCalibrate the radio inputs in the vehicle settings. Do not hold the throttle to the bottom of the bowl when shown. Allow the program to equalize with the stick in its resting position, and it will calibrate without issue.\nFly the drone.\n\n\n\n\nController configuration. Calibration here before the radio is a good idea.\n\n\n\n\n\nCalibrating the joysticks as the drone’s radio\n\n\n\n\n\n\nI had a blast on this project and learned a great deal about drones, as well as ways that I could continue developing as both a computer scientist and an engineer. I had never been able to both build and code something before, and I found out that I loved it, as it brought together both my mechanical skill set and my CS abilities. I have found something I am passionate about and will be continuing to build devices, hopefully drones and other robots in the future.\nI also learned a ton of Python from working on the MAVLink protocol, as well as a deeper understanding of communication and how signals can be passed over SSH to different programs. I used a great deal of my Linux knowledge and fixed a more complex problem than I had ever come across on the Steam Deck, which I really enjoyed as well. Finally, I found a huge category of things to reverse engineer, and will be looking deeper into drone firmware when I get time. I think that there is so much to see and exploit in cheap drone hardware, and I would love to spend more time actually exploring that area of cybersecurity and vulnerability research.\n\n\n\nJoe Duva, who served as my project mentor for this work. Joe brought me tools from home and consistently assisted me in thinking better about my work, as well as engineering better solutions when I was stuck.\nWill Gray-Roncall, who ordered me a ton of wiring, batteries, and everything else I needed, as well as allowed me to work on a drone in the first place. I am so glad he had it in the closet.\nBlake, who got me the MacBook Pro from surplus and walked around with me to see the semiconductor foundries in building 13. Enjoy the Asahi MBP.",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html#summary-of-work-while-at-the-jhu-apl",
+    "href": "items/jhu.html#summary-of-work-while-at-the-jhu-apl",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "I worked at the Johns Hopkins Applied Physics Laboratory from June 10 to June 27. While there, I developed a quadcopter-style drone that demonstrated the ability for both autonomous and manual control from a Steam Deck controller. I established the data pathway between the Raspberry Pi and the Steam Deck, including the ability to use the joysticks in place of a radio controller to pilot the drone.\nIn addition to the drone’s development, I was able to experiment with using Asahi Linux on an Apple Silicon MacBook Pro, as well as begin reverse engineering the ArduPilot firmware for the Beelink F504 board. I feel that the reverse engineering presents a viable future for research, and I would like to continue studying the platform to better understand its vulnerabilities and function.",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html#drone-components",
+    "href": "items/jhu.html#drone-components",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "I built an autonomous quadcopter-style drone with what I would refer to as a “spread X” shaped frame and four 2306 1755KV motors, making the drone in the 5-6 inch size range. The size metric refers to the propeller size, not the actual drone size itself.\nThe physical components of the drone are as follows:\n\nFC Stack: RADIX2HD\nComputer: Raspberry Pi 4\nBattery: CHNL 2200mAh 70C 7.4V Battery\nMotors: Flight XING2 2306 1755KV Drone Motor\nCamera: VIA Labs Camera",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html#first-problems-and-beginning-communication-with-the-drone",
+    "href": "items/jhu.html#first-problems-and-beginning-communication-with-the-drone",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "Upon assembly, I realized that the drone kit was missing several key components, first of which was the battery. I then performed research on the capabilities of the motors provided by the kit, and ordered the largest battery that I could find that provided the required voltage for the drone’s FC stack and motors. The large battery size provided additional range and ensured that the Raspberry Pi could be powered by the same battery as the FC stack assembly.\n\n\n\nTop view of fully constructed drone\n\n\nNext, I began tackling the communication problems. The documentation provided with the kit offered little to no actual documentation of how communication between devices and hardware would actually work, so I began researching and finally settled on QGroundControl as the flight software I would use on the computer itself. Before QGroundControl was useful, though, I needed to figure out how to connect the Raspberry Pi to the FC stack, and then the Pi to my computer where QGroundControl itself was running.\nWhen I got the Raspberry Pi, I was unable to get it to connect to the JHU network, so I began by getting the Pi connected to a monitor and setting up some of its local settings. Upon logging into the Pi for the first time, I had my first glimpse at some software produced by whoever had been working on the drone before me. It seemed like a Python-based, homemade attempt at QGroundControl. I connected the Pi to the JHU-Visitor network and then enabled SSH on the Pi so that I could connect to it from my development machine.\nAfter SSHing into the Pi, I used the command lsusb to determine the FC stack to be a RADIX2HD board running a version of ArduPilot as its firmware. I then spent time working with and reading the code for the GUI that was developed on the Raspberry Pi, and trying to get the drone to pass the pre-arm checks associated with arming from the Python script. However, I continually ran into the same issues with the ArduPilot firmware itself, which stopped me from being able to arm the drone with the home-built Python script.\nAfter several hours of manipulating the Python script, I researched the firmware more and found the mavproxy.py command, which I then installed onto the Pi. This allowed me to run mavproxy.py, which would immediately connect the Pi to the FC stack and allowed me to change variables in the firmware, fixing the pre-arm check errors. However, the home-built software was still not playing nicely with the stack or the MAVProxy protocol. So I scrapped it and began using QGroundControl full time instead, as it was a more robust and industry-developed option.\nIn order to get QGroundControl to see the drone, I needed to route the MAVLink packets into one of the ports that QGroundControl looked at for connections. This led me to use the UDP protocol on port 14550, which I was able to accomplish by specifying the drone as a device and then using several flags in addition to the mavproxy.py command on my computer. This then allowed me to open the QGroundControl window and connect immediately to the drone.\n\n\n\nThe RADIX2FC flight stack. The SD card is where the firmware modules are flashed.\n\n\nThe flight stack of the drone uses ArduPilot to connect to the Raspberry Pi for autonomous flight. The Raspberry Pi gives the drone the potential to connect to my computer running QGroundControl and facilitate waypoint-based flight. The Pi also allows for an LLM to be installed onto it in order to allow for autonomous flight capabilities. It also has image recognition software that allows the drone to label and categorize images into larger categories.\nI then needed to power the entire thing, Pi and all, from the same battery. Using a buck converter, I was able to assemble a wiring harness that allowed me to power the entire drone with the singular battery, despite the Pi needing a lower voltage than the FC stack. We did this by cutting an XT60 connector and splicing it into a smaller gauge wire, then running that into the converter. We then connected that to a USB-C stub cable and used it to power the Pi.\n\n\n\nThe wiring harness built for the drone. Joe Duva helped me design this and provided the buck converter that I used.",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html#using-the-steam-deck-to-control-the-drone-via-qgroundcontrol",
+    "href": "items/jhu.html#using-the-steam-deck-to-control-the-drone-via-qgroundcontrol",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "Until this point I had been connecting to and working with the drone entirely from my laptop running Ubuntu 24.04. However, included with the drone kit was a Steam Deck that seemed to be running Ubuntu. It was locked, and no one had the password, so I used the Ubuntu recovery menu to reset the password. I then began poking around to see if I could make the same processes work from the Steam Deck instead of the computer.\nI quickly ran into several major roadblocks. For starters, using the apt command in any way resulted in an instant segmentation fault. Checking the package’s existence with dpkg was also confusing, as it listed the package as installed and existing. I got around this by downloading the .deb package from Ubuntu’s website and attempting to reinstall it with dpkg itself. This failed and gave me another set of errors, which required a different package. I downloaded that package and attempted to install it with dpkg, and got a different error that dpkg itself was corrupted. This led me to dig through the config files for dpkg itself, and realize that they had been completely corrupted.\nAfter this revelation, I was able to recompile dpkg, and then build both of my required packages to get apt working again. Things went much quicker after that, and I was able to install and start the SSH service on the Deck, and then actually update the entire system to Ubuntu 22.04, which was required to run QGroundControl. I then was able to both SSH into the Pi from the Deck as well as pass back the MAVProxy packets to the Deck, allowing for connection to QGC on the Deck. I was close, but I couldn’t get the joysticks to work, which was the entire reason for using the Steam Deck: to bypass the need for a second controller or radio to fly the drone.\n\n\n\nSteam Deck running QGroundControl\n\n\nI began trying to get the joystick input drivers to work with QGC itself, but after a little while began to look for other options. Through some research, I realized that the Steam client could be used to run any program on the computer by loading it as a “non-Steam game.” This would allow the Steam client to import the Steam Deck’s controls into the application, as the client would run it in the same environment as it would run any video game. This gave me the ability to use the joysticks as the radio controls for the drone.\n\n\n\nQGroundControl as a Steam game in my library\n\n\nAfter getting the joysticks to work, I was able to pass all pre-flight checks aside from the GPS requirement, and actually execute a full launch sequence while the drone was taped down on the desk. It is very close to being completed.",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html#other-research-and-ideas-for-continued-development",
+    "href": "items/jhu.html#other-research-and-ideas-for-continued-development",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "In between getting cables and other physical supplies I needed for the drone, I was able to work on a few smaller projects. The first was installing Asahi Linux onto a 16-inch M1 Max MacBook Pro, which I did to test the distro as well as using Linux on the ARM-based processor. Asahi uses Fedora 42 as the kernel and GNOME as the stock window manager. Its limitations are that the MacBook Pro cannot use Thunderbolt or USB-C ports for additional displays, or run virtual machines, as the ARM-based architecture is not overly developed with Linux packages. While there may be a way to make QEMU or Virt-Manager work on the ARM-based Fedora install, I was unable to figure it out in the time I had before I was back to working on the drone. If VM support was available, it would greatly improve the usefulness of the MacBook Pro and make the device more worth its large price tag.\n\n\n\nM1 Pro MacBook Pro running Fedora 42 with Sway and Alacritty\n\n\nSecondly, I was able to take some of the Arduino ArduCopter firmware and begin reverse engineering it. I think that this area of vulnerability analysis would be an extremely fruitful area of research, and that better understanding the weaknesses with drone firmware could lead to breakthroughs in drone deterrence for both the private and military sectors.\nAs for the drone, next steps would include porting the camera into the QGroundControl application, as well as installing a GPS module and getting an antenna or radio to allow for communication without Wi-Fi. This would require some development on the Steam Deck as well, as I am unsure how that platform would work with a different antenna. A mesh network would also be interesting to investigate. I also would love to see what we could do with different scanners or radar on the actual drone, like a LiDAR scanner or infrared capabilities.",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html#interfacing-with-the-drone-technical-information",
+    "href": "items/jhu.html#interfacing-with-the-drone-technical-information",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "The drone uses the following communication stack:\n\n\n\n\n\nflowchart TB\n  pc[\"Ground Station&lt;br/&gt;(Steam Deck with QGroundControl)\"]\n  pi[\"Raspberry Pi&lt;br/&gt;(Onboard Computer)\"]\n  fc[\"Flight Controller&lt;br/&gt;(RADIX2HD)\"]\n\n  pc --&gt;|\"UDP / SSH via Wi-Fi&lt;br/&gt;port 14550\"| pi\n  pi --&gt;|\"UART / MAVLink&lt;br/&gt;/dev/ttyACM0\"| fc\n  fc --&gt;|\"Telemetry / Sensor Data\"| pi\n  pi --&gt;|\"Telemetry / MAVLink\"| pc\n\n\n\n\n\n\n\n\n\nSSH into the drone using the -X flag so that an X server is generated for the Raspberry Pi. The Raspberry Pi has its own drone control app that starts on login. Its only usage at this time is to operate the camera, and it does not succeed in arming the drone.\nExit the spawned window for controlling the drone.\nRun the following command to connect to the drone via MAVProxy and forward the data back to the computer at port 14550, which is how the drone connects to QGroundControl:\nmavproxy.py --master=/dev/&lt;location_of_drone&gt; \\\n  --baudrate 57600 \\\n  --out=udp:&lt;pc_ip&gt;:14550\nNavigate to the Steam client. Open the client and go to your library.\nClick the plus button and add the QGroundControl AppImage as a game.\nOpen the controller settings and make sure that it is being run with “Gamepad with Joystick Trackpad” mode enabled. Close the window.\nUnder settings, open properties/controller. Next to the “Override for QGC inputs” section, choose “Enable Steam Input” from the dropdown menu.\nRun QGroundControl from the Steam launcher.\nQGroundControl should automatically connect to the drone, as the packets are being forwarded at port 14550.\n\n\n\n\nQGroundControl in the Steam Library with the MAVLink command prepared\n\n\nOnce QGroundControl is connected:\n\nInside QGC, enable centered joysticks for throttle control, and then check to see that the inputs are being mapped to QGC from the live menu.\nCalibrate the radio inputs in the vehicle settings. Do not hold the throttle to the bottom of the bowl when shown. Allow the program to equalize with the stick in its resting position, and it will calibrate without issue.\nFly the drone.\n\n\n\n\nController configuration. Calibration here before the radio is a good idea.\n\n\n\n\n\nCalibrating the joysticks as the drone’s radio",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html#lessons-learned",
+    "href": "items/jhu.html#lessons-learned",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "I had a blast on this project and learned a great deal about drones, as well as ways that I could continue developing as both a computer scientist and an engineer. I had never been able to both build and code something before, and I found out that I loved it, as it brought together both my mechanical skill set and my CS abilities. I have found something I am passionate about and will be continuing to build devices, hopefully drones and other robots in the future.\nI also learned a ton of Python from working on the MAVLink protocol, as well as a deeper understanding of communication and how signals can be passed over SSH to different programs. I used a great deal of my Linux knowledge and fixed a more complex problem than I had ever come across on the Steam Deck, which I really enjoyed as well. Finally, I found a huge category of things to reverse engineer, and will be looking deeper into drone firmware when I get time. I think that there is so much to see and exploit in cheap drone hardware, and I would love to spend more time actually exploring that area of cybersecurity and vulnerability research.",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/jhu.html#special-thanks",
+    "href": "items/jhu.html#special-thanks",
+    "title": "APL Drone Development",
+    "section": "",
+    "text": "Joe Duva, who served as my project mentor for this work. Joe brought me tools from home and consistently assisted me in thinking better about my work, as well as engineering better solutions when I was stuck.\nWill Gray-Roncall, who ordered me a ton of wiring, batteries, and everything else I needed, as well as allowed me to work on a drone in the first place. I am so glad he had it in the closet.\nBlake, who got me the MacBook Pro from surplus and walked around with me to see the semiconductor foundries in building 13. Enjoy the Asahi MBP.",
+    "crumbs": [
+      "APL Drone Development"
+    ]
+  },
+  {
+    "objectID": "items/dotfiles.html",
+    "href": "items/dotfiles.html",
+    "title": "Dotfiles",
+    "section": "",
+    "text": "Vim Plug is a minimalistic plugin manager that allows you to install plugins without creating an IDE out of Vim like LazyVim does.\nvim-plug - Config (init.vim)\n\" tab -&gt; 4 spaces\nset tabstop=4\nset shiftwidth=4\nset expandtab\n\n\" numbers + syntax highlighting + line endings\nset nu list\nsyntax on\n\nautocmd FileType markdown syntax match markdownBold /\\*\\*\\zs.*\\ze\\*\\*/ containedin=ALL | highlight markdownBold ctermfg=Magenta guifg=#FF69B4\n\ncall plug#begin()\n\nPlug 'tomasr/molokai'\nPlug 'vim-airline/vim-airline'\nPlug 'vim-airline/vim-airline-themes'\nPlug 'lervag/vimtex'\nPlug 'neanias/everforest-nvim', { 'branch': 'main' }\nPlug 'maxmx03/fluoromachine.nvim', { 'branch': 'main'}\nPlug 'loctvl842/monokai-pro.nvim'\n\ncall plug#end()\n\n\" theme\ncolorscheme monokai-pro-octagon\nlet g:rehash256 = 1\n\nhi Normal ctermbg=none\nhi NonText ctermbg=none\nhi LineNr ctermbg=none\n\n\" vimtex\nlet g:vimtex_view_method = 'zathura'\n\n\" airline\nlet airline_theme='minimalist'\n\n\" air-line\nlet g:airline_powerline_fonts = 1\n\nif !exists('g:airline_symbols')\n    let g:airline_symbols = {}\nendif\n\n\" unicode symbols\nlet g:airline_left_sep = '»'\nlet g:airline_left_sep = '▶'\nlet g:airline_right_sep = '«'\nlet g:airline_right_sep = '◀'\nlet g:airline_symbols.linenr = '␊'\nlet g:airline_symbols.linenr = '␤'\nlet g:airline_symbols.linenr = '¶'\nlet g:airline_symbols.branch = '⎇'\nlet g:airline_symbols.paste = 'ρ'\nlet g:airline_symbols.paste = 'Þ'\nlet g:airline_symbols.paste = '∥'\nlet g:airline_symbols.whitespace = 'Ξ'\n\n\" airline symbols\nlet g:airline_left_sep = ''\nlet g:airline_left_alt_sep = ''\nlet g:airline_right_sep = ''\nlet g:airline_right_alt_sep = ''\nlet g:airline_symbols.branch = ''\nlet g:airline_symbols.readonly = ''\nlet g:airline_symbols.linenr = ''\n\nset omnifunc=htmlcomplete#CompleteTags"
+  },
+  {
+    "objectID": "items/dotfiles.html#neovim-vim-plug",
+    "href": "items/dotfiles.html#neovim-vim-plug",
+    "title": "Dotfiles",
+    "section": "",
+    "text": "Vim Plug is a minimalistic plugin manager that allows you to install plugins without creating an IDE out of Vim like LazyVim does.\nvim-plug - Config (init.vim)\n\" tab -&gt; 4 spaces\nset tabstop=4\nset shiftwidth=4\nset expandtab\n\n\" numbers + syntax highlighting + line endings\nset nu list\nsyntax on\n\nautocmd FileType markdown syntax match markdownBold /\\*\\*\\zs.*\\ze\\*\\*/ containedin=ALL | highlight markdownBold ctermfg=Magenta guifg=#FF69B4\n\ncall plug#begin()\n\nPlug 'tomasr/molokai'\nPlug 'vim-airline/vim-airline'\nPlug 'vim-airline/vim-airline-themes'\nPlug 'lervag/vimtex'\nPlug 'neanias/everforest-nvim', { 'branch': 'main' }\nPlug 'maxmx03/fluoromachine.nvim', { 'branch': 'main'}\nPlug 'loctvl842/monokai-pro.nvim'\n\ncall plug#end()\n\n\" theme\ncolorscheme monokai-pro-octagon\nlet g:rehash256 = 1\n\nhi Normal ctermbg=none\nhi NonText ctermbg=none\nhi LineNr ctermbg=none\n\n\" vimtex\nlet g:vimtex_view_method = 'zathura'\n\n\" airline\nlet airline_theme='minimalist'\n\n\" air-line\nlet g:airline_powerline_fonts = 1\n\nif !exists('g:airline_symbols')\n    let g:airline_symbols = {}\nendif\n\n\" unicode symbols\nlet g:airline_left_sep = '»'\nlet g:airline_left_sep = '▶'\nlet g:airline_right_sep = '«'\nlet g:airline_right_sep = '◀'\nlet g:airline_symbols.linenr = '␊'\nlet g:airline_symbols.linenr = '␤'\nlet g:airline_symbols.linenr = '¶'\nlet g:airline_symbols.branch = '⎇'\nlet g:airline_symbols.paste = 'ρ'\nlet g:airline_symbols.paste = 'Þ'\nlet g:airline_symbols.paste = '∥'\nlet g:airline_symbols.whitespace = 'Ξ'\n\n\" airline symbols\nlet g:airline_left_sep = ''\nlet g:airline_left_alt_sep = ''\nlet g:airline_right_sep = ''\nlet g:airline_right_alt_sep = ''\nlet g:airline_symbols.branch = ''\nlet g:airline_symbols.readonly = ''\nlet g:airline_symbols.linenr = ''\n\nset omnifunc=htmlcomplete#CompleteTags"
+  },
+  {
+    "objectID": "items/dotfiles.html#neovim-lazyvim",
+    "href": "items/dotfiles.html#neovim-lazyvim",
+    "title": "Dotfiles",
+    "section": "Neovim + LazyVim",
+    "text": "Neovim + LazyVim\nLazyVim is a much more IDE like vim experience written in Lua. The kickstarter is nice and can be used well with little modification.\nLazy Vim Starter:\nLazyVim"
+  },
+  {
+    "objectID": "items/dotfiles.html#alacritty",
+    "href": "items/dotfiles.html#alacritty",
+    "title": "Dotfiles",
+    "section": "Alacritty",
+    "text": "Alacritty\nAlacritty is a beautiful terminal that is highly customizable and looks great.\nAlacritty"
+  },
+  {
+    "objectID": "items/dotfiles.html#tmux",
+    "href": "items/dotfiles.html#tmux",
+    "title": "Dotfiles",
+    "section": "TMUX",
+    "text": "TMUX\nBy using plugins TMUX can be improved visually as well as granted permanance, meaning sessions can be restored with ease. TPM Manager is the most straigtforward tmux plugin manager I have found.\nTPM"
   }
 ]
