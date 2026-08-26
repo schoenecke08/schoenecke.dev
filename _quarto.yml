@@ -31,6 +31,7 @@ website:
     - items/jhu.qmd
     - items/mpblinux.qmd
     - items/booklist.qmd
+    - items/tools.qmd
 
 format:
   html:

@@ -1,0 +1,227 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tikz}
+\usepackage{float}
+
+
+\usetikzlibrary{positioning, arrows.meta}
+
+\tikzset{
+  module/.style={
+    rectangle,
+    draw=black,
+    fill=blue!10,
+    minimum width=4.5cm,
+    minimum height=1cm,
+    text centered
+  },
+  arrow/.style={
+    thick,
+    -{Stealth},
+    line width=1pt
+  }
+}
+
+
+\title{APL Drone Development}
+\author{Alan Schoenecke}
+\date{June 2025}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\pagebreak
+
+\section{Summary of Work While at the JHU APL}
+I worked at the JHU APL from the 10th of June to the 27th. While there, I devloped a quadcopter style drone that demonstrated the ability for both autonomous and manual control from a steam deck controller. I established the data pathway between the raspberry pi and the steam deck, including being able to use the joysticks in place of a radio controller to pilot the drone. 
+
+In addition to the drone's development, I was able to experiment with using Ashai linux on an Apple Silicon Macbook Pro, as well as begin reverse engineering the ArduPilot firmware for the Beelink F504 Board. I feel that the reverse engineering presents a viable future for research and would like to continue studying the platform to better understand it for vulnerabilities and its function.
+
+
+
+\section{Drone Components}
+I built an autonomous quadcopter-style drone with what I would refer to as a 'spread X' shaped frame and 4 '2306' 1755KV motors, making the drone in the 5-6" size range. The size metric refers to the propeller size, not the actual drone size itself. 
+
+
+
+
+The physical components of the drone are as follows:
+\begin{enumerate}
+    \item FC Stack: RADIX2HD
+    \item Computer: Raspberry Pi 4 
+    \item Battery: CHNL 2200mAh 70C 7.4V Battery 
+    \item Motors: Flight XING2 2306 1755KV Drone Motor
+    \item Camera: VIA Labs Camera ?
+\end{enumerate}
+
+\section{First Problems and Beginning Communication with the Drone}
+
+Upon assembly, I realized that the drone kit was missing several key components, first of which was the battery. I then performed research on the capabilities of the motors provided by the kit, and ordered the largest battery that I could find that provided the required voltatge for the drone's FC stack and motors. The large battery size provided additional range, and ensured that the raspberry pi could be powered by the same battery as the FC stack assembly.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{drone.jpg}
+    \caption{Top view of fully constructed drone}
+    \label{fig:drone-top-view}
+\end{figure}
+
+Next, I began tackling the communication problems. The documentation provided with the kit offered little to no actual documentation of how communication between devices and hardware would actually work, so I began researching and finally settled on QGroundControl as the flight software I would use on the computer itself. Before QGroundControl was useful though, I needed to figure out how to connect the raspberry pi to the FC stack, and then the pi to my computer where QGroundControl itself was running.
+
+When I got the RPI, I was unable to get it to connect to the JHU network, so I began by getting the pi connected to a monitor and setting up some of its local settings. Upon logging into the pi for the first time, I had my first glimpse at some software produced by whoever had been working on the drone before me, that seemed like a python based home made attempt at QGroundControl. I connected the pi to the JHU-Visitor network and then enabled SSH on the pi so that I could connect to it from my development machine.
+
+After SSHing into the PI, I used the command lsusb to determine the FC stack to be a RADIX2HD board running a version of ArduPilot as its firmware. I then spent time working with and reading the code for the GUI that was developed on the RPI, and trying to get the drone to pass the pre-arm checks associated with arming from the python script. However, I continually ran into the same issues with the ArduPilot firmware itself, which stopped me from being able to arm the drone with the home built python script.
+
+After several hours of manipulating the python script, I researched the firmware more and found the mavproxy command which I then installed onto the pi. This allowed me to run the command 'mavproxy.py' which would immediately connect the pi to the FC stack, and allowed me to change variables in the firmware, fixing the pre arm check errors. However, the homebuilt software was \underline{still} not playing nice with the stack or the mavproxy protocol. So I scrapped it and began using QGroundControl full time instead as it was a more robust and industry developed option.
+
+In order to get QGroundControl to see the drone, I needed to route the mavlink packets into one of the ports that QGroundControl looked at for connections. This led me to use the UDP protocol on port 14550, which I was able to accomplish by specifying the drone as a device and then using several flags in addition to the mavproxy.py command on my computer. This then allowed me to open the QGroundControl window and connect immediately to the drone.
+\pagebreak
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{FC.jpg}
+    \caption{The RADIX2FC Flight Stack. The SD card is where the firmware modules are flashed onto.}
+    \label{fig:enter-label}
+\end{figure}
+
+The flight stack of the drone uses Ardupilot to connect to the Rpi for autonomous flight. The RPI gives the drone the potential to connect to my computer running QGroundControl and facilitate waypoint-based flight. The Pi also allows for an LLM to be installed onto it in order to allow for autonomous flight capabilities (autopilot). It also has image recognition software that allows the drone to label and categorize images into larger categories.
+
+I then needed to power the entire thing - PI and all - from the same battery. Using a buck converter, I was able to assemble a wiring harness that allowed me to power the entire drone with the singular battery, despite the PI needing a lower voltage than the FC stack. We did this by cutting an XT60 connector and splicing it into a smaller gauge wire, then running that into the converter. We then connected that to a USB-C stub cable and used it to power the PI.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\linewidth]{wiring.jpg}
+    \caption{The wiring harness that we built for the drone. Joe Duva really helped me design this, and provided the buck converter that I used.}
+    \label{fig:enter-label}
+\end{figure}
+
+\pagebreak
+
+\section{Using the Steam Deck to control the Drone via QGroundControl}
+
+Until this point I had been connecting to and working with the drone entirely from my laptop running Ubuntu 24.08, however included with the drone kit was a steam deck that seemed to be running Ubuntu. It was locked, and no one had the password, so I used the Ubuntu recovery menu to reset the password. I then began poking around to see if I could make the same processes work from the steam deck instead of the computer.
+
+I quickly ran into several major roadblocks. For starters, using the apt command in any way resulted in an instant segmentation fault. Checking the package's existance with dpkg was also confusing as it listed the package as installed and existing. I got around this by downloading the .deb package from ubuntu's website and attempting to reinstall it with dpkg itself. This failed, and gave me another set of errors, which required a different package. I downloaded that package and attempted to install it with dpkg and got a different error, that dpkg itself was corrupted. This led me to dig through the config files for dpkg itself, and realize that they had been completely corrupted! 
+
+After this revelation, I was able to recompile dpkg, and then build both of my required packages to get apt working again. Things went much quicker after that, and I was able to install and start the ssh service on the deck, and then actually update the entire system to Ubuntu 22.04, which was required to run QGroundControl. I then was able to both ssh into the pi from the deck as well as pass back the mavproxy packets to the deck, allowing for connection to QGC on the deck. I was close, but I couldn't get the joysticks to work, which was the entire reason for using the steam deck - to bypass the need for a second controller or radio to fly the drone.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{deck.jpg}
+    \caption{Steam Deck running QGC}
+    \label{fig:enter-label}
+\end{figure}
+\pagebreak
+
+I began trying to get the joystick input drivers to work with QGC itself, but after a little while began to look for other options. Through some research I realized that the steam client could be used to run any program on the computer by loading it as a 'non steam game'. This would allow the steam client to import the Steam deck's controls into the application, as the client would run it in the same environment as it would run any video game. This gave me the ability to use the joysticks as the radio controls for the drone.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{steamQGC.png}
+    \caption{QGC as a steam game in my library}
+    \label{fig:QGC-Steam}
+\end{figure}
+
+After getting the joysticks to work, I was able to pass all pre flight checks aside from the GPS requirement, and actually execute a full launch sequence while the drone was taped down on the desk. It is very close to being completed!!
+
+\section{Other Research and Ideas for Continued Development}
+
+In between getting cables and other physical supplies I needed for the drone, I was able to work on a few smaller projects. The first was installing Ashai linux onto a 16" M1 Max Macbook Pro, which I did to test the distro as well as using linux on the ARM based processor. Ashai uses Fedora 42 as the kernel and GNOME as the stock window manager. Its limitations are that the macbook pro cannot use thunderbolt or USB-c ports for additional displays, or run virtual machines as the ARM based architecture is not overly developed with linux packages. While there may be a way to make QEMU/Virt-Manager to work on the ARM based fedora install, I was unable to figure it out in the time I had before I was back to working on the drone. If VM support was availavble, it would greatly improve the usefulness of the MacBook pro, and make the device more worth its large price tag.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{AshaiMBP.jpg}
+    \caption{M1 Pro MBP Running Fedora 42 with Sway and Alacritty}
+    \label{fig:enter-label}
+\end{figure}
+
+Secondly, I was able to take some of the Arduino ArduCopter firmware and begin reverse engineering it. I think that this area of vulnerability analysis would be an extremely fruitful area of research and that better understanding the weaknesses with drone firmware could lead to breakthroughs in drone deterrence, for both the private and military sectors.
+
+As for the drone, next steps would include porting the camera into the QGroundControl application, as well as installing a GPS module and getting an antenna/radio to allow for communication without wifi. This would require some development on the Steam deck as well, as I am unsure how that platform would work with a different antenna. A mesh network would also be interesting to investigate. I also would love to see what we could do with different scanners/radar on the actual drone, like a lIDAR scanner or infared capabilities.
+
+\section{Interfacing With the Drone - Technical Information}
+The drone uses the following communication stack:
+
+\begin{center}
+\begin{tikzpicture}[node distance=2cm]
+
+% Nodes
+\node[module] (pc) {Ground Station (Steam Deck with QGC)};
+\node[module, below=of pc] (pi) {Raspberry Pi (Onboard Computer)};
+\node[module, below=of pi] (fc) {Flight Controller (RADIX2HD)};
+
+% Arrows and Labels
+\draw[arrow] (pc) -- (pi) node[midway, right, xshift=0.2cm] {UDP / SSH via WiFi (port 14550)};
+\draw[arrow] (pi) -- (fc) node[midway, right, xshift=0.2cm] {UART / MAVLink (/dev/ttyAMC0)};
+\draw[arrow] (fc) -- (pi) node[midway, left, xshift=-0.2cm] {Telemetry / Sensor Data};
+\draw[arrow] (pi) -- (pc) node[midway, left, xshift=-0.2cm] {Telemetry / MAVLink};
+
+\end{tikzpicture}
+\end{center}
+
+Connecting to the drone on the steam deck in QGC:
+\begin{enumerate}
+    \item SSH into the drone using the -X flag so that an X server is generated for the Rpi. The RPI has its own drone control app that starts on login. Its only usage at this time is to operate the camera, and does not succeed in arming the drone.
+    \item Exit the spawned window for controlling the drone
+    \item Run the command: 
+    \begin{verbatim}
+        \textbf{mavproxy.py --master=/dev/<location_of_drone> 
+        --baudrate 57600 --out=udp:<pc_ip>:14550} 
+    \end{verbatim}
+    to connect to the drone via mavproxy and forward the data back to the computer at port 14550 which is how the drone connects to QGroundControl
+    \item navigate to the Steam client. Open the client, and go to your library
+    \item Click the plus button and add the QGroundControl app image as a 'game'
+    \item Open the controller settings and make sure that it is being run with "Gamepad with Joystick Trackpad" mode enabled. Close the window.
+    \item Under settings, open properties/controller. Next to the 'Override for QGC inputs section, choose the option 'enable steam input' from the dropdown menu.
+    \item Run QGC from the steam launcher
+    \item QGroundControl should automatically connect to the drone as the packets are being forwarded at the port 14550.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\linewidth]{steam-mavlink.png}
+    \caption{QGC in the Steam Library with the MavLink command prepared}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{enumerate}
+    \item Inside of QGC, enable centered joysticks for throttle control, and then check to see that the inputs are being mapped to QGC from the live menu
+    \item Calibrate the radio inputs in the vehicle settings. Do not hold the throttle to the bottom of the bowl when shown. Allow the program to equalize with the stick in its resting position, and it will calibrate without issue. 
+    \item Fly the drone!
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{getingJoysticks.png}
+    \caption{Controller Configuration - Calibration here before the radio is a good idea}
+    \label{fig:enter-label}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{radioconf.png}
+    \caption{Calibrating the joysticks as the drone's radio}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\textbf{Important Information:}
+\begin{center}
+\textbf{Steamdeck User and Password:}\\
+user: pi\\
+password: APL\\
+
+\textbf{Raspberry PI user and password:}\\
+user: pi\\
+password: rasp\\
+\end{center}
+
+\section{Lessons Learned}
+I had a blast on this project and learned a great deal about drones, as well as ways that I could continue developing as both a computer scientist and an engineer. I had never been able to both build and code something before, and I found out that I loved it, as it brought together both my mechanical skill set and my CS abilities. I have found something I am passionate about and will be continuing to build devices, hopefully drones and other robots in the future.
+
+I also learned a ton of python from working on the mavlink protocol, as well as a deeper understanding of communication and how signals can be passed over ssh to different programs. I used a great deal of my Linux knowledge and fixed a more complex problem than I had ever come across on the steam deck, which I really enjoyed as well. Finally, I found a huge category of things to reverse engineer, and will be looking deeper into drone firmware when I get time. I think that there is so much to see and exploit in cheap drone hardware, and I would love to spend more time actually exploring that area of cybersecurity and vulnerability research.
+
+\section{Special Thanks}
+\textbf{Joe Duva}, who served as my project mentor for this work. Joe brought me tools from home and consistently assisted me in thinking better about my work, as well as engineer solutions better when I was stuck.
+
+\textbf{Will Gray-Roncall}, who ordered me a ton of wiring, batteries, and everything else I needed, as well as allowed me to work on a drone in the first place. I am so glad he had it in the closet!
+
+\textbf{Blake}, who got me the MacBook Pro from surplus, and walked around with me to see the semiconductor foundries in building 13. Enjoy the Ashai MBP!
+
+\end{document}
