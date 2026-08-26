@@ -54,7 +54,10 @@
     "href": "items/tools.html",
     "title": "Tools",
     "section": "",
-    "text": "Vim, NeoVim\n\nIf you dislike the Vim editor or are unwilling to spend time configuring to your needs, at least learn the keybindings. They will save you significant amounts of time.\n\nTMUX\n\nTMUX is a must as it turns one terminal into many and can allow for better multitasking.\n\n[TMUX Cheat Sheet]\n\n\nGDB-GEF\n\nDynamic Reverse Engineering tool. Adding the GEF to GDB makes it an entirely different experience and greatly improves the base GDB program.\n\n\n\nReuseCC BY-NC-SA 4.0"
+    "text": "Vim, NeoVim\n\nIf you dislike the Vim editor or are unwilling to spend time configuring to your needs, at least learn the keybindings. They will save you significant amounts of time.\n\nTMUX\n\nTMUX is a must as it turns one terminal into many and can allow for better multitasking.\n\n[TMUX Cheat Sheet]\n\n\nGDB-GEF\n\nDynamic Reverse Engineering tool. Adding the GEF to GDB makes it an entirely different experience and greatly improves the base GDB program.\n\n\n\nReuseCC BY-NC-SA 4.0",
+    "crumbs": [
+      "Tools"
+    ]
   },
   {
     "objectID": "index.html",
@@ -91,7 +94,7 @@
     "href": "index.html#writing-and-mindfulness",
     "title": "Al Schoenecke",
     "section": "Writing and Mindfulness",
-    "text": "Writing and Mindfulness\n\nJournals and Planners",
+    "text": "Writing and Mindfulness\n\nHobonichi Techo Planner\nMoleskine Expanded Soft Cover Notebook",
     "crumbs": [
       "Al Schoenecke"
     ]
