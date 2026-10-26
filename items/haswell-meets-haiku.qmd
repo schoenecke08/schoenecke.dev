@@ -379,6 +379,8 @@ After that, `restic unlock` and `restic prune` reclaimed the space on the backup
 
 I wanted to use everything without ever opening an SSH session. [Hermes Agent](https://github.com/NousResearch/hermes-agent) runs on the server as a service and connects outward to Discord and Telegram, so it needs no open ports and works from anywhere.
 
+![Hermes's terminal UI on the server, running Claude Haiku with my Trello, team and Google MCP servers connected](../images/hermes-screenshot.png){width="100%"}
+
 ## Setting it up safely
 
 The setup wizard has a lot of options, and the defaults are generous. Here's what I chose:
