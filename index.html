@@ -399,11 +399,14 @@ ul.task-list li input[type="checkbox"] {
   You are the <span class="visitor-count"></span> visitor!
 </p>
 <script>
-  // Total site visitors from GoatCounter; the site code lives in goatcounter.html.
+  // Home page visitors from GoatCounter; the site code lives in goatcounter.html.
   window.addEventListener("load", function () {
+    // Sit directly above the GitHub link instead of under the last section.
+    var links = document.querySelector(".about-links");
+    if (links) links.parentNode.insertBefore(document.getElementById("visitor-counter"), links);
     var tracker = document.querySelector("script[data-goatcounter]");
     if (!tracker) return;
-    var url = tracker.dataset.goatcounter.replace(/\/count$/, "/counter/TOTAL.json");
+    var url = tracker.dataset.goatcounter.replace(/\/count$/, "/counter/%2F.json");
     fetch(url)
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function (data) {
