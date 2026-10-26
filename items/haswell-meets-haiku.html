@@ -128,7 +128,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Haswell Meets Haiku - Using Antiquated Technology to Build a Personal Productivity Server – schoenecke.dev">
 <meta property="og:description" content="How I turned a retired laptop into an always-on server that runs AI agents for scheduling, task management, inbox triage and note-taking, reachable from my phone and PC, for under $15 a month.">
+<meta property="og:image" content="https://schoenecke.dev/images/hermes-screenshot.png">
 <meta property="og:site_name" content="schoenecke.dev">
+<meta property="og:image:height" content="945">
+<meta property="og:image:width" content="1909">
 <link rel="canonical" href="https://schoenecke.dev/items/haswell-meets-haiku.html">
 </head>
 
@@ -957,6 +960,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="step-7-hermes-the-chat-front-door" class="level1" data-number="9">
 <h1 data-number="9"><span class="header-section-number">9</span> Step 7: Hermes, the chat front door</h1>
 <p>I wanted to use everything without ever opening an SSH session. <a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a> runs on the server as a service and connects outward to Discord and Telegram, so it needs no open ports and works from anywhere.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../images/hermes-screenshot.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Hermes’s terminal UI on the server, running Claude Haiku with my Trello, team and Google MCP servers connected</figcaption>
+</figure>
+</div>
 <section id="setting-it-up-safely" class="level2" data-number="9.1">
 <h2 data-number="9.1" class="anchored" data-anchor-id="setting-it-up-safely"><span class="header-section-number">9.1</span> Setting it up safely</h2>
 <p>The setup wizard has a lot of options, and the defaults are generous. Here’s what I chose:</p>
