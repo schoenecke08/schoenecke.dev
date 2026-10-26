@@ -405,19 +405,29 @@ ul.task-list li input[type="checkbox"] {
     if (n >= 11 && n <= 13) return "th";
     return { 1: "st", 2: "nd", 3: "rd" }[n % 10] || "th";
   }
-  // Home page visitors from GoatCounter; the site code lives in goatcounter.html.
+  // Home page visitors from Abacus (abacus.jasoncameron.dev), which returns the
+  // updated count immediately. GoatCounter still tracks visits for the stats
+  // dashboard (see goatcounter.html). Each browser is counted once; repeat
+  // visits and local previews only read the count.
+  var COUNTER = "https://abacus.jasoncameron.dev/%s/schoenecke.dev/home-visitors";
+  function alreadyCounted() {
+    try { return localStorage.getItem("home-visitor-counted") === "1"; } catch (e) { return false; }
+  }
+  function markCounted() {
+    try { localStorage.setItem("home-visitor-counted", "1"); } catch (e) {}
+  }
   window.addEventListener("load", function () {
     // Sit directly above the GitHub link instead of under the last section.
     var links = document.querySelector(".about-links");
     if (links) links.parentNode.insertBefore(document.getElementById("visitor-counter"), links);
-    var tracker = document.querySelector("script[data-goatcounter]");
-    if (!tracker) return;
-    var url = tracker.dataset.goatcounter.replace(/\/count$/, "/counter/%2F.json");
-    fetch(url)
+    var local = ["localhost", "127.0.0.1"].indexOf(location.hostname) !== -1;
+    var action = local || alreadyCounted() ? "get" : "hit";
+    fetch(COUNTER.replace("%s", action))
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function (data) {
+        if (action === "hit") markCounted();
         var counter = document.getElementById("visitor-counter");
-        counter.querySelector(".visitor-count").textContent = data.count + ordinal(data.count);
+        counter.querySelector(".visitor-count").textContent = data.value + ordinal(data.value);
         counter.hidden = false;
       })
       .catch(function () {});
