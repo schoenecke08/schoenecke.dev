@@ -83,6 +83,7 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Al Schoenecke – schoenecke.dev">
+<meta property="og:description" content="Development">
 <meta property="og:site_name" content="schoenecke.dev">
 <link rel="canonical" href="https://schoenecke.dev/">
 </head>
@@ -394,6 +395,25 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://www.hackthebox.com/">Hack the Box</a></li>
 <li><a href="https://cryptohack.org/">Cryptohack</a></li>
 </ul>
+<p id="visitor-counter" class="visitor-counter" hidden="">
+  You are the <span class="visitor-count"></span> visitor!
+</p>
+<script>
+  // Total site visitors from GoatCounter; the site code lives in goatcounter.html.
+  window.addEventListener("load", function () {
+    var tracker = document.querySelector("script[data-goatcounter]");
+    if (!tracker) return;
+    var url = tracker.dataset.goatcounter.replace(/\/count$/, "/counter/TOTAL.json");
+    fetch(url)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (data) {
+        var counter = document.getElementById("visitor-counter");
+        counter.querySelector(".visitor-count").textContent = data.count;
+        counter.hidden = false;
+      })
+      .catch(function () {});
+  });
+</script>
 
 
 </section>
@@ -407,6 +427,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
  <!-- /main -->
+<!-- GoatCounter visitor tracking. Site code: alschoenecke. -->
+<script data-goatcounter="https://alschoenecke.goatcounter.com/count" async="" src="//gc.zgo.at/count.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     // Ensure there is a toggle, if there isn't float one in the top right
