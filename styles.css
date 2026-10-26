@@ -221,7 +221,7 @@ body.quarto-dark svg marker path {
 
 /* Home page visitor counter */
 .visitor-counter {
-  margin-top: 3rem;
+  margin: 2rem 0 0.75rem;
   text-align: center;
 }
 
