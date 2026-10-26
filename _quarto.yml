@@ -38,6 +38,7 @@ format:
   html:
     canonical-url: true
     css: styles.css
+    include-after-body: goatcounter.html
     license: CC BY-NC-SA
     toc: true
     toc-expand: 2

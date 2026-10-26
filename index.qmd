@@ -44,3 +44,25 @@ format:
 - [Hack the Box](https://www.hackthebox.com/)
 - [Cryptohack](https://cryptohack.org/)
 
+
+```{=html}
+<p id="visitor-counter" class="visitor-counter" hidden>
+  You are the <span class="visitor-count"></span> visitor!
+</p>
+<script>
+  // Total site visitors from GoatCounter; the site code lives in goatcounter.html.
+  window.addEventListener("load", function () {
+    var tracker = document.querySelector("script[data-goatcounter]");
+    if (!tracker) return;
+    var url = tracker.dataset.goatcounter.replace(/\/count$/, "/counter/TOTAL.json");
+    fetch(url)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (data) {
+        var counter = document.getElementById("visitor-counter");
+        counter.querySelector(".visitor-count").textContent = data.count;
+        counter.hidden = false;
+      })
+      .catch(function () {});
+  });
+</script>
+```

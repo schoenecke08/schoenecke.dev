@@ -218,3 +218,14 @@ body.quarto-dark svg marker path {
   color: var(--site-accent-text) !important;
   fill: var(--site-accent-text) !important;
 }
+
+/* Home page visitor counter */
+.visitor-counter {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.visitor-counter .visitor-count {
+  color: var(--site-accent);
+  font-weight: 700;
+}
