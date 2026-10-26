@@ -53,3 +53,168 @@ body,
   border-radius: 8px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
 }
+
+/* Site accent. Light mode uses a darker shade for text so it stays readable
+   on the light background; fills and borders always use the navbar orange. */
+:root {
+  --site-accent: #f87C63;
+  --site-accent-text: #b5442c;
+  --site-accent-tint: rgba(248, 124, 99, 0.12);
+  --site-accent-fill: #fde4de;
+}
+
+body.quarto-dark {
+  --site-accent-text: #f87C63;
+  --site-accent-tint: rgba(248, 124, 99, 0.16);
+}
+
+/* Panel tabsets: orange instead of Bootstrap's white active tab, which is
+   unreadable on the dark theme. */
+.panel-tabset .nav-tabs {
+  border-bottom-color: var(--site-accent);
+}
+
+.panel-tabset .nav-tabs .nav-link {
+  color: var(--site-accent-text);
+  border-color: transparent;
+}
+
+.panel-tabset .nav-tabs .nav-link:hover,
+.panel-tabset .nav-tabs .nav-link:focus {
+  color: var(--site-accent-text);
+  border-color: var(--site-accent) var(--site-accent) transparent;
+  background-color: var(--site-accent-tint);
+}
+
+.panel-tabset .nav-tabs .nav-link.active {
+  color: black;
+  background-color: var(--site-accent);
+  border-color: var(--site-accent);
+}
+
+.panel-tabset .tab-content {
+  border-color: var(--site-accent);
+}
+
+/* Mermaid diagrams in dark mode: the neutral theme draws labels and lines in
+   near-black, which vanishes on the dark background. */
+body.quarto-dark svg .messageText,
+body.quarto-dark svg .loopText,
+body.quarto-dark svg .labelText {
+  fill: #e8e8e8 !important;
+  stroke: none !important;
+}
+
+body.quarto-dark svg .messageLine0,
+body.quarto-dark svg .messageLine1,
+body.quarto-dark svg .actor-line,
+body.quarto-dark svg .flowchart-link {
+  stroke: #b0b0b0 !important;
+}
+
+body.quarto-dark svg marker path {
+  fill: #b0b0b0 !important;
+  stroke: #b0b0b0 !important;
+}
+
+/* ---- Accent theme for pages with `body-classes: accent-theme` ---- */
+
+/* Links and inline code */
+.accent-theme main a:not(.nav-link):not(.anchorjs-link),
+.accent-theme main a:not(.nav-link):not(.anchorjs-link):visited {
+  color: var(--site-accent-text);
+}
+
+.accent-theme main a:not(.nav-link):not(.anchorjs-link):hover {
+  color: var(--site-accent);
+}
+
+.accent-theme main :not(pre) > code {
+  color: var(--site-accent-text);
+  background-color: var(--site-accent-tint);
+}
+
+/* Headings and section numbers */
+.accent-theme main h1,
+.accent-theme main h2 {
+  border-bottom-color: var(--site-accent);
+}
+
+.accent-theme main .header-section-number {
+  color: var(--site-accent-text);
+}
+
+/* Table of contents */
+.accent-theme #TOC .nav-link.active,
+.accent-theme #TOC .nav-link:hover {
+  color: var(--site-accent-text) !important;
+  border-left-color: var(--site-accent) !important;
+}
+
+/* Callouts: every type gets the orange accent */
+.accent-theme .callout {
+  border-left-color: var(--site-accent) !important;
+}
+
+.accent-theme .callout .callout-header {
+  background-color: var(--site-accent-tint) !important;
+}
+
+.accent-theme .callout .callout-title-container,
+.accent-theme .callout .callout-btn-toggle {
+  color: var(--site-accent-text);
+}
+
+/* Tables */
+.accent-theme main table thead th {
+  border-bottom: 2px solid var(--site-accent) !important;
+  color: var(--site-accent-text);
+}
+
+.accent-theme main table tbody tr:hover {
+  background-color: var(--site-accent-tint);
+}
+
+/* Code blocks: filename bar and left edge */
+.accent-theme .code-with-filename-file {
+  background-color: var(--site-accent-tint) !important;
+  border-left: 3px solid var(--site-accent);
+}
+
+.accent-theme .code-with-filename-file pre strong {
+  color: var(--site-accent-text);
+}
+
+.accent-theme div.sourceCode {
+  border-left: 3px solid var(--site-accent);
+}
+
+/* Mermaid diagrams: light-orange boxes with orange borders and dark text,
+   readable in both light and dark mode */
+.accent-theme svg .node rect,
+.accent-theme svg .node polygon,
+.accent-theme svg .node circle,
+.accent-theme svg .node path,
+.accent-theme svg rect.actor {
+  fill: var(--site-accent-fill) !important;
+  stroke: var(--site-accent) !important;
+}
+
+.accent-theme svg .node .label,
+.accent-theme svg .node .nodeLabel,
+.accent-theme svg text.actor,
+.accent-theme svg text.actor > tspan {
+  color: #222 !important;
+  fill: #222 !important;
+}
+
+.accent-theme svg .cluster rect {
+  fill: var(--site-accent-tint) !important;
+  stroke: var(--site-accent) !important;
+}
+
+.accent-theme svg .cluster-label .nodeLabel,
+.accent-theme svg .cluster .label {
+  color: var(--site-accent-text) !important;
+  fill: var(--site-accent-text) !important;
+}
