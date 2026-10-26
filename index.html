@@ -399,6 +399,12 @@ ul.task-list li input[type="checkbox"] {
   You are the <span class="visitor-count"></span> visitor!
 </p>
 <script>
+  // "1" -> "st", "12" -> "th", "1,042" -> "nd"
+  function ordinal(count) {
+    var n = parseInt(String(count).replace(/\D/g, ""), 10) % 100;
+    if (n >= 11 && n <= 13) return "th";
+    return { 1: "st", 2: "nd", 3: "rd" }[n % 10] || "th";
+  }
   // Home page visitors from GoatCounter; the site code lives in goatcounter.html.
   window.addEventListener("load", function () {
     // Sit directly above the GitHub link instead of under the last section.
@@ -411,7 +417,7 @@ ul.task-list li input[type="checkbox"] {
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function (data) {
         var counter = document.getElementById("visitor-counter");
-        counter.querySelector(".visitor-count").textContent = data.count;
+        counter.querySelector(".visitor-count").textContent = data.count + ordinal(data.count);
         counter.hidden = false;
       })
       .catch(function () {});
